@@ -1,0 +1,982 @@
+{
+  "questions": [
+    {
+      "id": 264,
+      "text": "Ağ : Qara = Gecə : ?\n///\nWhite : Black = Night : ?"
+    },
+    {
+      "id": 265,
+      "text": "İsti : Soyuq = Uzun : ?\n///\nHot : Cold = Long : ?"
+    },
+    {
+      "id": 266,
+      "text": "Dünən çərşənbə idi, sabah nədir?\n///\nYesterday was Wednesday, what day is tomorrow?"
+    },
+    {
+      "id": 267,
+      "text": "Bu gün bazar ertəsidir, 3 gün sonra hansı gün olacaq?\n///\nToday is Monday, what day will it be in 3 days?"
+    },
+    {
+      "id": 270,
+      "text": "Ata : Oğul = Ana : ?\n///\nFather : Son = Mother : ?"
+    },
+    {
+      "id": 271,
+      "text": "1 il neçə aydır?\n///\nHow many months are in a year?"
+    },
+    {
+      "id": 272,
+      "text": "10-un yarısı neçədir?\n///\nWhat is half of 10?"
+    },
+    {
+      "id": 273,
+      "text": "Kvadratın neçə tərəfi var?\n///\nHow many sides does a square have?"
+    },
+    {
+      "id": 274,
+      "text": "Üçbucağın daxili bucaqlarının cəmi neçədir?\n///\nWhat is the sum of the interior angles of a triangle?"
+    },
+    {
+      "id": 275,
+      "text": "1 saat neçə dəqiqədir?\n///\nHow many minutes are in 1 hour?"
+    },
+    {
+      "id": 278,
+      "text": "'KİTAB' 12345 kimi şifrələnirsə, 'BATİK' necə şifrələnər?\n///\nIf 'BOOK' is encoded as 12345, how is 'KOOB' encoded?"
+    },
+    {
+      "id": 279,
+      "text": "Əli 10, qardaşı 5 yaşındadır. 5 il sonra yaşları fərqi nə qədər olacaq?\n///\nAli is 10, his brother is 5. What will be the difference in their ages in 5 years?"
+    },
+    {
+      "id": 280,
+      "text": "20-nin 50%-i neçədir?\n///\nWhat is 50% of 20?"
+    },
+    {
+      "id": 281,
+      "text": "A=1, B=2, C=3 isə CAB=?\n///\nIf A=1, B=2, C=3, then CAB=?"
+    },
+    {
+      "id": 283,
+      "text": "Həftənin 5-ci günü hansıdır?\n///\nWhat is the 5th day of the week?"
+    },
+    {
+      "id": 284,
+      "text": "1 kiloqram neçə qramdır?\n///\nHow many grams are in 1 kilogram?"
+    },
+    {
+      "id": 285,
+      "text": "Güzgüdə saat 03:00-dır. Əslində saat neçədir?\n///\nA mirror shows 03:00. What is the actual time?"
+    },
+    {
+      "id": 286,
+      "text": "4 pişik 4 siçanı 4 dəqiqəyə tutur. 1 pişik 1 siçanı neçə dəqiqəyə tutar?\n///\n4 cats catch 4 mice in 4 minutes. In how many minutes will 1 cat catch 1 mouse?"
+    },
+    {
+      "id": 287,
+      "text": "1 düzünə neçə ədəddir?\n///\nHow many units are in a dozen?"
+    },
+    {
+      "id": 288,
+      "text": "Otaqda 5 şam yanırdı, 2-si söndürüldü. Neçə şam qaldı?\n///\n5 candles were burning in a room, 2 were extinguished. How many candles remain?"
+    },
+    {
+      "id": 289,
+      "text": "100-dən 1 çıxsaq neçə qalar?\n///\nWhat is 100 minus 1?"
+    },
+    {
+      "id": 292,
+      "text": "Şimalın əksi hansı istiqamətdir?\n///\nWhat is the opposite direction of North?"
+    },
+    {
+      "id": 293,
+      "text": "Azərbaycan əlifbasında neçə hərf var?\n///\nHow many letters are in the Azerbaijani alphabet?"
+    },
+    {
+      "id": 294,
+      "text": "Göy qurşağında neçə rəng var?\n///\nHow many colors are in a rainbow?"
+    },
+    {
+      "id": 296,
+      "text": "3 usta 3 divarı 3 saata rəngləyirsə, 9 usta 9 divarı neçə saata rəngləyər?\n///\nIf 3 painters paint 3 walls in 3 hours, in how many hours will 9 painters paint 9 walls?"
+    },
+    {
+      "id": 297,
+      "text": "Qutuda 5 qırmızı, 3 mavi top var. Təsadüfən çıxarılan topun mavi olma ehtimalı?\n///\nA box contains 5 red and 3 blue balls. What is the probability of randomly drawing a blue ball?"
+    },
+    {
+      "id": 298,
+      "text": "Ana 40, qızı 10 yaşındadır. Neçə il sonra ana qızından 2 dəfə böyük olacaq?\n///\nMother is 40, daughter is 10. In how many years will the mother be twice as old as the daughter?"
+    },
+    {
+      "id": 299,
+      "text": "Saat 15:15-də saat və dəqiqə əqrəbləri arasındakı bucaq neçə dərəcədir?\n///\nAt 15:15, what is the angle between the hour and minute hands in degrees?"
+    },
+    {
+      "id": 301,
+      "text": "1-dən 100-ə qədər ədədləri yazarkən neçə dəfə 9 rəqəmindən istifadə edilir?\n///\nHow many times does the digit 9 appear when writing numbers from 1 to 100?"
+    },
+    {
+      "id": 302,
+      "text": "Zərin atılması zamanı tək ədəd düşmə ehtimalı nə qədərdir?\n///\nWhat is the probability of rolling an odd number on a fair die?"
+    },
+    {
+      "id": 303,
+      "text": "5 maşın 5 dəqiqəyə 5 detal hazırlayır. 100 maşın 100 detalı neçə dəqiqəyə hazırlayar?\n///\n5 machines make 5 parts in 5 minutes. In how many minutes will 100 machines make 100 parts?"
+    },
+    {
+      "id": 304,
+      "text": "Avtomobil 60 km/s ilə 3 saata getdiyi yolu 90 km/s ilə neçə saata gedər?\n///\nA car covers a distance in 3 hours at 60 km/h. How many hours will it take at 90 km/h?"
+    },
+    {
+      "id": 305,
+      "text": "10 nəfərlik qrupda hər kəs bir-biri ilə görüşür. Cəmi neçə görüşmə olur?\n///\nIn a group of 10 people, everyone handshakes with everyone once. How many total handshakes occur?"
+    },
+    {
+      "id": 307,
+      "text": "200-ün 15%-i neçədir?\n///\nWhat is 15% of 200?"
+    },
+    {
+      "id": 308,
+      "text": "2 alma = 1 armud, 3 armud = 1 nar. 1 nar = neçə alma?\n///\n2 apples = 1 pear, 3 pears = 1 pomegranate. 1 pomegranate = how many apples?"
+    },
+    {
+      "id": 309,
+      "text": "A > B və B > C olarsa, hansı mütləq doğrudur?\n///\nIf A > B and B > C, which statement is strictly true?"
+    },
+    {
+      "id": 310,
+      "text": "Tülkü, Canavar, Ayı, Qartal - hansı fərqlidir?\n///\nFox, Wolf, Bear, Eagle - which one is different?"
+    },
+    {
+      "id": 312,
+      "text": "Düzbucaqlı üçbucağın katetləri 6 və 8-dirsə, hipotenuz neçədir?\n///\nIf the legs of a right triangle are 6 and 8, what is the hypotenuse?"
+    },
+    {
+      "id": 313,
+      "text": "Qatar 100 metr uzunluğundadır və 100 metrlik tuneli 10 saniyəyə keçir. Sürəti nə qədərdir (m/s)?\n///\nA train 100 meters long passes through a 100-meter tunnel in 10 seconds. What is its speed (m/s)?"
+    },
+    {
+      "id": 314,
+      "text": "Hər 30 dəqiqədən bir avtobus gəlir. 08:15-də biri gəlibsə, 3-cü avtobus saat neçədə gələcək?\n///\nA bus arrives every 30 minutes. If one arrived at 08:15, at what time will the 3rd bus arrive?"
+    },
+    {
+      "id": 315,
+      "text": "İki zər eyni anda atılır. Üstə düşən xalların cəminin 7 olma ehtimalı?\n///\nTwo dice are rolled simultaneously. What is the probability that the sum of the numbers is 7?"
+    },
+    {
+      "id": 316,
+      "text": "5 fəhlə işi 10 günə bitirir. 10 fəhlə eyni işi neçə günə bitirər?\n///\n5 workers finish a job in 10 days. In how many days will 10 workers finish the same job?"
+    },
+    {
+      "id": 318,
+      "text": "Adam şərqə 3 km, sonra şimala 4 km getdi. Başlanğıc nöqtədən neçə km aralıdadır?\n///\nA person walked 3 km east, then 4 km north. How many km are they from the starting point?"
+    },
+    {
+      "id": 319,
+      "text": "Ədəd oxunda -5 ilə 5 arasında (özləri daxil olmamaqla) neçə tam ədəd var?\n///\nHow many integers are between -5 and 5 on the number line (exclusive)?"
+    },
+    {
+      "id": 320,
+      "text": "Kvadratın sahəsi 81-dirsə, perimetri neçədir?\n///\nIf the area of a square is 81, what is its perimeter?"
+    },
+    {
+      "id": 322,
+      "text": "A B-nin atasıdır, amma B A-nın oğlu deyil. B kimdir?\n///\nA is B's father, but B is not A's son. Who is B?"
+    },
+    {
+      "id": 323,
+      "text": "Düzbucaqlının eni 4, uzunluğu 5 olarsa, sahəsi nə qədərdir?\n///\nIf a rectangle has width 4 and length 5, what is its area?"
+    },
+    {
+      "id": 324,
+      "text": "30%-i 60 olan ədəd hansıdır?\n///\nWhich number has 30% equal to 60?"
+    },
+    {
+      "id": 325,
+      "text": "Hər iki tərəfdən eyni cür oxunan sözlərə və ədədlərə nə deyilir?\n///\nWhat is the term for words or numbers that read the same backwards and forwards?"
+    },
+    {
+      "id": 327,
+      "text": "AZƏRBAYCAN sözündə neçə fərqli (təkrarlanmayan) hərf var?\n///\nHow many distinct (non-repeating) letters are in the word AZƏRBAYCAN?"
+    },
+    {
+      "id": 328,
+      "text": "Hansı ədəd özünün kvadratına bərabərdir?\n///\nWhich number is equal to its own square?"
+    },
+    {
+      "id": 329,
+      "text": "1 yanvar bazar ertəsidirsə, 31 yanvar hansı günə təsadüf edir?\n///\nIf January 1st is Monday, what day does January 31st fall on?"
+    },
+    {
+      "id": 330,
+      "text": "3 ardıcıl cüt ədədin cəmi 24-dür. Ən böyüyü hansıdır?\n///\nThe sum of 3 consecutive even integers is 24. What is the largest integer?"
+    },
+    {
+      "id": 331,
+      "text": "9 topdan yalnız 1-i digərlərindən ağırdır. Tərəzi ilə ən az neçə dəfə ölçərək ağır topu tapmaq olar?\n///\nOut of 9 balls, only 1 is heavier than the others. What is the minimum number of balance scale weighings to find it?"
+    },
+    {
+      "id": 332,
+      "text": "Ailədə 5 qardaş var və hər qardaşın 1 bacısı var. Ailədə cəmi neçə uşaq var?\n///\nA family has 5 brothers, and each brother has 1 sister. How many total children are in the family?"
+    },
+    {
+      "id": 333,
+      "text": "Göldəki nilufər hər gün əvvəlki gündən 2 qat böyüyür. 48 günə gölü tam örtürsə, yarısını neçə günə örtər?\n///\nA water lily doubles in size each day. If it covers the entire lake in 48 days, in how many days does it cover half?"
+    },
+    {
+      "id": 334,
+      "text": "3 alma və 2 armud 15 AZN, 2 alma və 3 armud 10 AZN-dir. 1 alma neçəyədir?\n///\n3 apples and 2 pears cost 15 AZN, 2 apples and 3 pears cost 10 AZN. How much is 1 apple?"
+    },
+    {
+      "id": 335,
+      "text": "Şam 24 sm-dir, hər saatda 3 sm əriyir. Neçə saata şamın yarısı qalar?\n///\nA candle is 24 cm long and melts 3 cm per hour. In how many hours will half the candle remain?"
+    },
+    {
+      "id": 336,
+      "text": "Həyətdə toyuqlar və inəklər var. Onların cəmi 10 başı və 30 ayağı var. Həyətdə neçə inək var?\n///\nThere are chickens and cows in a yard. Together they have 10 heads and 30 legs. How many cows are in the yard?"
+    },
+    {
+      "id": 338,
+      "text": "Hansı rəqəm Roma rəqəmləri ilə yazıla bilməz?\n///\nWhich number cannot be written in Roman numerals?"
+    },
+    {
+      "id": 339,
+      "text": "Qaçış yarışında 2-ci yerdə olanı keçən şəxs neçənci yerə çıxır?\n///\nIn a race, if you overtake the person in 2nd place, what place are you in?"
+    },
+    {
+      "id": 340,
+      "text": "Qaçış yarışında ən axırıncını keçən şəxs neçənci olar?\n///\nIn a race, what place are you in if you overtake the last person?"
+    },
+    {
+      "id": 341,
+      "text": "5 nəfər dairəvi masa arxasında neçə fərqli üsulla əyləşə bilər?\n///\nIn how many different ways can 5 people sit around a circular table?"
+    },
+    {
+      "id": 342,
+      "text": "Zər ardıcıl 3 dəfə atılır. Hər üçündə 6 düşmə ehtimalı?\n///\nA die is rolled 3 consecutive times. What is the probability of rolling a 6 all three times?"
+    },
+    {
+      "id": 343,
+      "text": "Ana və atanın yaşları cəmi 70-dir. Ata ananın yaşında olanda, ana indiki yaşının yarısında idi. Atanın yaşı?\n///\nThe sum of a father and mother's ages is 70. When the father was the mother's age, the mother was half her current age. What is the father's age?"
+    },
+    {
+      "id": 344,
+      "text": "Qutuda 10 qara, 10 ağ corab var. Gözüyumlu halda mütləq eyni rəng cüt əldə etmək üçün ən az neçə corab çıxarılmalıdır?\n///\nA box has 10 black and 10 white socks. Blindfolded, what is the minimum number of socks to pull to guarantee a matching pair?"
+    },
+    {
+      "id": 346,
+      "text": "Gecə saat 3-də güclü yağış yağıbsa, 72 saat sonra havanın günəşli olma ehtimalı nə qədərdir?\n///\nIf it rains heavily at 3 AM, what is the probability that the weather will be sunny 72 hours later?"
+    },
+    {
+      "id": 347,
+      "text": "Standart şahmat taxtasında cəmi neçə kvadrat var?\n///\nHow many total squares are on a standard chessboard?"
+    },
+    {
+      "id": 348,
+      "text": "2 ata və 2 oğul balıq tutmağa getdi. Cəmi 3 balıq tutdular və hərəsinə 1 balıq düşdü. Bu necə ola bilər?\n///\n2 fathers and 2 sons went fishing. They caught 3 fish in total and each got 1 fish. How is this possible?"
+    },
+    {
+      "id": 349,
+      "text": "12 ədədini hansı ən kiçik müsbət tam ədədə vurmaq lazımdır ki, nəticə tam kvadrat olsun?\n///\nWhat is the smallest positive integer that 12 must be multiplied by to become a perfect square?"
+    },
+    {
+      "id": 350,
+      "text": "x² = 16 tənliyində x-in ala biləcəyi qiymətlərin cəmi neçədir?\n///\nWhat is the sum of possible values of x in the equation x² = 16?"
+    },
+    {
+      "id": 351,
+      "text": "1-dən 100-ə qədər olan ardıcıl tam ədədlərin cəmi (1+2+3+...+100) neçədir?\n///\nWhat is the sum of consecutive integers from 1 to 100 (1+2+3+...+100)?"
+    },
+    {
+      "id": 352,
+      "text": "Bir otaqda 3 elektrik açarı var. Yan otaqda isə 3 lampa. Hər otağa yalnız 1 dəfə girməklə hansı açarın hansı lampaya aid olduğunu tapmaq mümkündürmü?\n///\nA room has 3 light switches, and the next room has 3 bulbs. Entering each room only once, can you determine which switch controls which bulb?"
+    },
+    {
+      "id": 353,
+      "text": "Əgər 1=5, 2=25, 3=125, 4=625 isə 5=?\n///\nIf 1=5, 2=25, 3=125, 4=625, then 5=?"
+    },
+    {
+      "id": 354,
+      "text": "8 ədəd 8 rəqəmindən toplama əməli vasitəsilə 1000 necə alınır? Bu əməldə neçə toplanan var (888+...)?\n///\nHow to get 1000 using only additions of the digit 8? How many addends are in this sum (888+...)?"
+    },
+    {
+      "id": 355,
+      "text": "A-dan B-yə 5 fərqli yol, B-dən C-yə 4 fərqli yol var. A-dan C-yə getmək üçün neçə marşrut mövcuddur?\n///\nThere are 5 routes from A to B, and 4 routes from B to C. How many total routes are there from A to C?"
+    },
+    {
+      "id": 356,
+      "text": "Kubun kənarlarının (tillərinin) sayı neçədir?\n///\nHow many edges does a cube have?"
+    },
+    {
+      "id": 357,
+      "text": "Yalnız riyazi simvollarla ardıcıl 3 ədəd yazın ki, cəmi 6 olsun (1, 2, 3 istifadə etmədən, sadəcə eyni rəqəm). O rəqəm hansıdır?\n///\nWrite 3 identical digits using only mathematical symbols so their sum is 6 (without using 1, 2, 3). Which digit is it?"
+    },
+    {
+      "id": 358,
+      "text": "Bir qabda 3 növ meyvə var: alma, armud, nar. Narların sayı almalardan 3 dəfə, armudlar narlardan 1 ədəd çoxdur. Cəmi 15 meyvə varsa, neçə alma var?\n///\nA bowl has apples, pears, and pomegranates. Pomegranates are 3 times apples, pears are 1 more than pomegranates. If there are 15 fruits total, how many apples are there?"
+    },
+    {
+      "id": 359,
+      "text": "1, 11, 21, 1211, 111221, növbəti ədəd?\n///\n1, 11, 21, 1211, 111221, what is the next number?"
+    },
+    {
+      "id": 360,
+      "text": "İki qardaşın yaşları cəmi 12-dir. Biri digərindən 10 yaş böyükdür. Kiçik qardaşın neçə yaşı var?\n///\nTwo brothers' ages sum to 12. One is 10 years older than the other. How old is the younger brother?"
+    },
+    {
+      "id": 361,
+      "text": "Veb tətbiqlərdə HTTP 404 Status Code nəyi bildirir?\n///\nWhat does the HTTP 404 Status Code indicate in web applications?"
+    },
+    {
+      "id": 362,
+      "text": "Serverin vəziyyətini (state) dəyişmədən məlumatı əldə etmək üçün əsasən hansı HTTP metodu istifadə olunur?\n///\nWhich HTTP method is primarily used to retrieve data without modifying server state?"
+    },
+    {
+      "id": 363,
+      "text": "CSS Box Model-də element məzmununu (content) bilavasitə əhatə edən və border-dən daxildə yerləşən qat hansıdır?\n///\nIn the CSS Box Model, which layer immediately wraps the content and sits inside the border?"
+    },
+    {
+      "id": 364,
+      "text": "Saytın navigasiya keçidlərini (navigation links) qruplaşdırmaq üçün hansı HTML5 semantik teqindən istifadə edilməlidir?\n///\nWhich semantic HTML5 tag should be used to group site navigation links?"
+    },
+    {
+      "id": 365,
+      "text": "Brauzerin tab-ı və ya pəncərəsi bağlandıqdan sonra belə məlumatları saxlayan client-side storage mexanizmi hansıdır?\n///\nWhich client-side storage mechanism retains data even after closing the browser tab or window?"
+    },
+    {
+      "id": 366,
+      "text": "Alias dəyişən vasitəsilə array/list dəyişdirildikdə nəticə nə olur?\n\n### Python:\n```python\na = [1, 2, 3]\nb = a\nb.append(4)\nprint(a)\n```\n\n### JavaScript:\n```javascript\nconst a = [1, 2, 3];\nconst b = a;\nb.push(4);\nconsole.log(a);\n```\n///\nWhat is the output when an array/list is modified via an alias variable?"
+    },
+    {
+      "id": 367,
+      "text": "String-in 1-dən 4-cü indeksinə qədər slice edilməsinin nəticəsi nədir?\n\n### Python:\n```python\ns = \\\"Python\\\"\nprint(s[1:4])\n```\n\n### JavaScript:\n```javascript\nconst s = \\\"Python\\\";\nconsole.log(s.slice(1, 4));\n```\n///\nWhat is the result of slicing a string from index 1 to 4?"
+    },
+    {
+      "id": 368,
+      "text": "Mövcud olmayan bir key susmaya görə qiymətlə (default fallback) çağırıldıqda hansı qiymət qaytarılır?\n\n### Python:\n```python\nd = {'a': 1, 'b': 2}\nprint(d.get('c', 3))\n```\n\n### JavaScript:\n```javascript\nconst d = { a: 1, b: 2 };\nconsole.log(d.c ?? 3);\n```\n///\nWhat value is returned when calling a non-existent key with a default fallback?"
+    },
+    {
+      "id": 369,
+      "text": "Şərt yoxlamasında (conditional check) boş list/array qiymətləndirildikdə nəticə nə olur?\n\n### Python:\n```python\nx = []\nif x:\n    print(\\\"True\\\")\nelse:\n    print(\\\"False\\\")\n```\n\n### JavaScript:\n```javascript\nconst x = [];\nif (x.length) {\n    console.log(\\\"True\\\");\n} else {\n    console.log(\\\"False\\\");\n}\n```\n///\nWhat is the result when evaluating an empty list/array in a conditional check?"
+    },
+    {
+      "id": 370,
+      "text": "Adi bölmə əməliyyatının (division) nəticəsi nədir?\n\n### Python:\n```python\nprint(1 / 2)\n```\n\n### JavaScript:\n```javascript\nconsole.log(1 / 2);\n```\n///\nWhat is the result of the division operation?"
+    },
+    {
+      "id": 371,
+      "text": "Tam bölmə (floor division) əməliyyatının nəticəsi nədir?\n\n### Python:\n```python\nprint(5 // 2)\n```\n\n### JavaScript:\n```javascript\nconsole.log(Math.floor(5 / 2));\n```\n///\nWhat is the result of the floor division operation?"
+    },
+    {
+      "id": 372,
+      "text": "2 ** 3 ifadəsi üçün qüvvətə yüksəltmə operatoru (exponentiation operator) nə qaytarır?\n\n### Python:\n```python\nprint(2 ** 3)\n```\n\n### JavaScript:\n```javascript\nconsole.log(2 ** 3);\n```\n///\nWhat does the exponentiation operator return for 2 ** 3?"
+    },
+    {
+      "id": 373,
+      "text": "İki array/list birləşdirildikdə (concatenation) nəticə nə olur?\n\n### Python:\n```python\nprint([1, 2] + [3, 4])\n```\n\n### JavaScript:\n```javascript\nconsole.log([1, 2].concat([3, 4]));\n```\n///\nWhat is the result when two arrays/lists are concatenated?"
+    },
+    {
+      "id": 374,
+      "text": "String təkrarlandıqda (string repeat) nəticə nə olur?\n\n### Python:\n```python\nx = \\\"Hi\\\"\nprint(x * 3)\n```\n\n### JavaScript:\n```javascript\nconst x = \\\"Hi\\\";\nconsole.log(x.repeat(3));\n```\n///\nWhat is the result of string repetition?"
+    },
+    {
+      "id": 375,
+      "text": "7 % 3 qalıq alma (modulo operation) əməliyyatının nəticəsi nədir?\n\n### Python:\n```python\nprint(7 % 3)\n```\n\n### JavaScript:\n```javascript\nconsole.log(7 % 3);\n```\n///\nWhat is the result of the modulo operation 7 % 3?"
+    },
+    {
+      "id": 376,
+      "text": "'42' string-ini integer-ə parse etdikdə nəticə nə olur?\n\n### Python:\n```python\nprint(int(\\\"42\\\") + 8)\n```\n\n### JavaScript:\n```javascript\nconsole.log(parseInt(\\\"42\\\") + 8);\n```\n///\nWhat is the result of parsing the string '42' into an integer?"
+    },
+    {
+      "id": 377,
+      "text": "Array-dəki elementlərin ümumi sayını necə tapmaq olar?\n\n### Python:\n```python\narr = [10, 20, 30, 40]\nprint(len(arr))\n```\n\n### JavaScript:\n```javascript\nconst arr = [10, 20, 30, 40];\nconsole.log(arr.length);\n```\n///\nHow is the total number of elements in an array determined?"
+    },
+    {
+      "id": 378,
+      "text": "String baş hərflərə (uppercase) çevrildikdə nəticə nə olur?\n\n### Python:\n```python\ns = \\\"hello\\\"\nprint(s.upper())\n```\n\n### JavaScript:\n```javascript\nconst s = \\\"hello\\\";\nconsole.log(s.toUpperCase());\n```\n///\nWhat is the result when converting a string to uppercase?"
+    },
+    {
+      "id": 379,
+      "text": "List-də elementin mövcudluğunu (item existence) yoxladıqda nə qaytarılır?\n\n### Python:\n```python\ncolors = ['red', 'green', 'blue']\nprint('green' in colors)\n```\n\n### JavaScript:\n```javascript\nconst colors = ['red', 'green', 'blue'];\nconsole.log(colors.includes('green'));\n```\n///\nWhat is returned when checking for item existence in a list/array?"
+    },
+    {
+      "id": 380,
+      "text": "Məntiqi inkarın (boolean negation) nəticəsi nə olur?\n\n### Python:\n```python\nflag = True\nprint(not flag)\n```\n\n### JavaScript:\n```javascript\nconst flag = true;\nconsole.log(!flag);\n```\n///\nWhat is the result of boolean negation?"
+    },
+    {
+      "id": 381,
+      "text": "'a,b,c' string-i vergüllə split edildikdə nəticə nə olur?\n\n### Python:\n```python\ns = \\\"a,b,c\\\"\nprint(s.split(\\\",\\\"))\n```\n\n### JavaScript:\n```javascript\nconst s = \\\"a,b,c\\\";\nconsole.log(s.split(\\\",\\\"));\n```\n///\nWhat is the result of splitting the string 'a,b,c' by comma?"
+    },
+    {
+      "id": 382,
+      "text": "Array elementləri defislə '-' join edildikdə nəticə nə olur?\n\n### Python:\n```python\nwords = [\\\"code\\\", \\\"dim\\\"]\nprint(\\\"-\\\".join(words))\n```\n\n### JavaScript:\n```javascript\nconst words = [\\\"code\\\", \\\"dim\\\"];\nconsole.log(words.join(\\\"-\\\"));\n```\n///\nWhat is the result of joining array elements with a hyphen '-'?"
+    },
+    {
+      "id": 383,
+      "text": "-15 üçün mütləq qiymət funksiyasının (absolute value) nəticəsi nədir?\n\n### Python:\n```python\nprint(abs(-15))\n```\n\n### JavaScript:\n```javascript\nconsole.log(Math.abs(-15));\n```\n///\nWhat is the result of the absolute value function for -15?"
+    },
+    {
+      "id": 384,
+      "text": "Funksiya icra olunduqdan sonra dəyişənin qiyməti nə olur?\n\n### Python:\n```python\nx = 10\ndef test():\n    x = 20\ntest()\nprint(x)\n```\n\n### JavaScript:\n```javascript\nlet x = 10;\nfunction test() {\n    let x = 20;\n}\ntest();\nconsole.log(x);\n```\n///\nWhat is the variable's value after the function executes?"
+    },
+    {
+      "id": 385,
+      "text": "pop() metodu tərəfindən hansı element silinir və qaytarılır?\n\n### Python:\n```python\nnums = [1, 2, 3]\nres = nums.pop()\nprint(res)\n```\n\n### JavaScript:\n```javascript\nconst nums = [1, 2, 3];\nconst res = nums.pop();\nconsole.log(res);\n```\n///\nWhich element is removed and returned by the pop() method?"
+    },
+    {
+      "id": 386,
+      "text": "[10, 20, 30] list-ində 20 elementinin indeksi nədir?\n\n### Python:\n```python\nnums = [10, 20, 30]\nprint(nums.index(20))\n```\n\n### JavaScript:\n```javascript\nconst nums = [10, 20, 30];\nconsole.log(nums.indexOf(20));\n```\n///\nWhat is the index of element 20 in the list [10, 20, 30]?"
+    },
+    {
+      "id": 387,
+      "text": "Susmaya görə arqumentli (default argument) funksiya çağırışının nəticəsi nədir?\n\n### Python:\n```python\ndef greet(name=\\\"User\\\"):\n    return \\\"Hello \\\" + name\nprint(greet())\n```\n\n### JavaScript:\n```javascript\nfunction greet(name = \\\"User\\\") {\n    return \\\"Hello \\\" + name;\n}\nconsole.log(greet());\n```\n///\nWhat is the result of calling a function with a default argument?"
+    },
+    {
+      "id": 388,
+      "text": "Ternary şərt ifadəsinin (ternary conditional expression) nəticəsi nədir?\n\n### Python:\n```python\nage = 18\nstatus = \\\"Adult\\\" if age >= 18 else \\\"Minor\\\"\nprint(status)\n```\n\n### JavaScript:\n```javascript\nconst age = 18;\nconst status = age >= 18 ? \\\"Adult\\\" : \\\"Minor\\\";\nconsole.log(status);\n```\n///\nWhat is the result of the ternary conditional expression?"
+    },
+    {
+      "id": 389,
+      "text": "Yerində çevirmə (reverse in-place) çağırıldıqdan sonra array-in vəziyyəti necə olur?\n\n### Python:\n```python\narr = [1, 2, 3]\narr.reverse()\nprint(arr)\n```\n\n### JavaScript:\n```javascript\nconst arr = [1, 2, 3];\narr.reverse();\nconsole.log(arr);\n```\n///\nWhat is the state of the array after in-place reverse?"
+    },
+    {
+      "id": 390,
+      "text": "100 tam ədədi üçün hansı tip təsviri (type description) qaytarılır?\n\n### Python:\n```python\nprint(type(100) == int)\n```\n\n### JavaScript:\n```javascript\nconsole.log(typeof 100 === 'number');\n```\n///\nWhat type description is returned for the integer 100?"
+    },
+    {
+      "id": 391,
+      "text": "String formatting / template string istifadəsinin nəticəsi nədir?\n\n### Python:\n```python\nname = \\\"Alice\\\"\nprint(f\\\"User: {name}\\\")\n```\n\n### JavaScript:\n```javascript\nconst name = \\\"Alice\\\";\nconsole.log(`User: ${name}`);\n```\n///\nWhat is the output of using string formatting / template string?"
+    },
+    {
+      "id": 392,
+      "text": "[1, 2, 2, 3] list-ində 2 ədədinin rast gəlinmə sayı (count) neçədir?\n\n### Python:\n```python\nnums = [1, 2, 2, 3]\nprint(nums.count(2))\n```\n\n### JavaScript:\n```javascript\nconst nums = [1, 2, 2, 3];\nconsole.log(nums.filter(x => x === 2).length);\n```\n///\nWhat is the count of number 2 in the list [1, 2, 2, 3]?"
+    },
+    {
+      "id": 393,
+      "text": "Silindikdən sonra key-ə müraciət etdikdə nəticə nə olur?\n\n### Python:\n```python\nd = {'a': 1}\ndel d['a']\nprint('a' in d)\n```\n\n### JavaScript:\n```javascript\nconst d = { a: 1 };\ndelete d.a;\nconsole.log('a' in d);\n```\n///\nWhat happens when accessing a key after it is deleted?"
+    },
+    {
+      "id": 394,
+      "text": "3 range limiti üçün hansı ədədlər siyahısı generator olunur?\n\n### Python:\n```python\nprint(list(range(3)))\n```\n\n### JavaScript:\n```javascript\nconsole.log([...Array(3).keys()]);\n```\n///\nWhat sequence of numbers is generated for a range limit of 3?"
+    },
+    {
+      "id": 395,
+      "text": "Dublikat elementləri olan [1, 1, 2, 2, 3] set-inin ölçüsü (size/length) nə qədərdir?\n\n### Python:\n```python\ns = set([1, 1, 2, 2, 3])\nprint(len(s))\n```\n\n### JavaScript:\n```javascript\nconst s = new Set([1, 1, 2, 2, 3]);\nconsole.log(s.size);\n```\n///\nWhat is the size/length of the set [1, 1, 2, 2, 3] with duplicate elements?"
+    },
+    {
+      "id": 396,
+      "text": "Server tərəfindən xüsusi icazə verilmədikdə cross-origin HTTP sorğularını məhdudlaşdıran brauzer mexanizmi hansıdır?\n///\nWhich browser mechanism restricts cross-origin HTTP requests unless explicitly permitted by the server?"
+    },
+    {
+      "id": 397,
+      "text": "Sadə olmayan cross-origin sorğulardan öncə brauzer tərəfindən 'Preflight' yoxlaması kimi avtomatik göndərilən HTTP sorğu metodu hansıdır?\n///\nWhich HTTP request method is automatically sent by browsers as a preflight check before non-simple cross-origin requests?"
+    },
+    {
+      "id": 398,
+      "text": "Autentifikasiya olunmuş istifadəçinin brauzerini aldadaraq zəifliyi olan tətbiqə istənməyən sorğular göndərməyə məcbur edən veb təhlükəsizlik hücumu hansıdır?\n///\nWhich web security attack tricks an authenticated user's browser into sending unauthorized requests to a vulnerable application?"
+    },
+    {
+      "id": 399,
+      "text": "Veb brauzerin Critical Rendering Path prosesindəki addımların doğru ardıcıllığı hansıdır?\n///\nWhat is the correct sequence of steps in the browser's Critical Rendering Path?"
+    },
+    {
+      "id": 400,
+      "text": "Şəbəkə effektivliyini artırmaq üçün HTTP/2 HTTP/1.1-ə nisbətən hansı əsas arxitektura üstünlüyünü təmin edir?\n///\nWhich major architectural advantage does HTTP/2 provide over HTTP/1.1 to improve network efficiency?"
+    },
+    {
+      "id": 401,
+      "text": "Array elementlərini filter və map etdikdə nəticə nə olur?\n\n### Python:\n```python\nnums = [1, 2, 3, 4]\nres = [x * 2 for x in nums if x > 2]\nprint(res)\n```\n\n### JavaScript:\n```javascript\nconst nums = [1, 2, 3, 4];\nconst res = nums.filter(x => x > 2).map(x => x * 2);\nconsole.log(res);\n```\n///\nWhat is the result of filtering and mapping array elements?"
+    },
+    {
+      "id": 402,
+      "text": "Inline lambda / arrow function çağırışının nəticəsi nədir?\n\n### Python:\n```python\nsquare = lambda x: x ** 2\nprint(square(4))\n```\n\n### JavaScript:\n```javascript\nconst square = x => x ** 2;\nconsole.log(square(4));\n```\n///\nWhat is the output of the inline lambda / arrow function call?"
+    },
+    {
+      "id": 403,
+      "text": "a və b dəyişənlərinin unpack olunmuş qiymətləri nədir?\n\n### Python:\n```python\na, b = [10, 20]\nprint(a + b)\n```\n\n### JavaScript:\n```javascript\nconst [a, b] = [10, 20];\nconsole.log(a + b);\n```\n///\nWhat are the unpacked values of variables a and b?"
+    },
+    {
+      "id": 404,
+      "text": "Rest parameter operatoru tərəfindən nə toplanır?\n\n### Python:\n```python\nfirst, *rest = [1, 2, 3, 4]\nprint(rest)\n```\n\n### JavaScript:\n```javascript\nconst [first, ...rest] = [1, 2, 3, 4];\nconsole.log(rest);\n```\n///\nWhat is captured by the rest parameter operator?"
+    },
+    {
+      "id": 405,
+      "text": "Birölçülü array-in shallow copy nüsxəsini dəyişdikdə nə baş verir?\n\n### Python:\n```python\na = [1, 2]\nb = a.copy()\nb.append(3)\nprint(a)\n```\n\n### JavaScript:\n```javascript\nconst a = [1, 2];\nconst b = [...a];\nb.push(3);\nconsole.log(a);\n```\n///\nWhat happens when modifying a shallow copy of a one-dimensional array?"
+    },
+    {
+      "id": 406,
+      "text": "Kəsişən key-ləri (overlapping keys) olan iki dictionary / object birləşdirildikdə (merge) nəticə nə olur?\n\n### Python:\n```python\nd1 = {'a': 1, 'b': 2}\nd2 = {'b': 99, 'c': 3}\nmerged = {**d1, **d2}\nprint(merged['b'])\n```\n\n### JavaScript:\n```javascript\nconst d1 = { a: 1, b: 2 };\nconst d2 = { b: 99, c: 3 };\nconst merged = { ...d1, ...d2 };\nconsole.log(merged.b);\n```\n///\nWhat is the result when merging two dictionaries/objects with overlapping keys?"
+    },
+    {
+      "id": 407,
+      "text": "Daxili vəziyyəti (inner state) artıran closure funksiyası çağırıldıqda nəticə nə olur?\n\n### Python:\n```python\ndef make_counter():\n    count = 0\n    def counter():\n        nonlocal count\n        count += 1\n        return count\n    return counter\n\nc = make_counter()\nc()\nprint(c())\n```\n\n### JavaScript:\n```javascript\nfunction makeCounter() {\n    let count = 0;\n    return function() {\n        count += 1;\n        return count;\n    };\n}\n\nconst c = makeCounter();\nc();\nconsole.log(c());\n```\n///\nWhat is the output when calling a closure function that increments inner state?"
+    },
+    {
+      "id": 408,
+      "text": "map / map() vasitəsilə ədədləri string-lərə çevirdikdə nəticə nə olur?\n\n### Python:\n```python\nnums = [1, 2]\nres = list(map(str, nums))\nprint(res)\n```\n\n### JavaScript:\n```javascript\nconst nums = [1, 2];\nconst res = nums.map(String);\nconsole.log(res);\n```\n///\nWhat is the result when converting numbers to strings via map()?"
+    },
+    {
+      "id": 409,
+      "text": "Array-dən müsbət ədədləri filter etdikdə nəticə nə olur?\n\n### Python:\n```python\nnums = [-2, 5, 0, 8]\nres = list(filter(lambda x: x > 0, nums))\nprint(res)\n```\n\n### JavaScript:\n```javascript\nconst nums = [-2, 5, 0, 8];\nconst res = nums.filter(x => x > 0);\nconsole.log(res);\n```\n///\nWhat is the result of filtering positive numbers from the array?"
+    },
+    {
+      "id": 410,
+      "text": "[10, 20, 30] array-inin sum reduction nəticəsi nədir?\n\n### Python:\n```python\nfrom functools import reduce\nnums = [10, 20, 30]\nres = reduce(lambda a, b: a + b, nums, 0)\nprint(res)\n```\n\n### JavaScript:\n```javascript\nconst nums = [10, 20, 30];\nconst res = nums.reduce((a, b) => a + b, 0);\nconsole.log(res);\n```\n///\nWhat is the sum reduction result for the array [10, 20, 30]?"
+    },
+    {
+      "id": 411,
+      "text": "Bərabər uzunluqlu iki array-i zip / map etdikdə hansı cütlüklər yaranır?\n\n### Python:\n```python\nkeys = ['a', 'b']\nvals = [1, 2]\nprint(dict(zip(keys, vals)))\n```\n\n### JavaScript:\n```javascript\nconst keys = ['a', 'b'];\nconst vals = [1, 2];\nconst res = Object.fromEntries(keys.map((k, i) => [k, vals[i]]));\nconsole.log(res);\n```\n///\nWhat pairs are created when zipping/mapping two equal-length arrays?"
+    },
+    {
+      "id": 412,
+      "text": "String-dəki müəyyən bir simvolu birbaşa indekslə dəyişməyə cəhd etdikdə nə baş verir?\n\n### Python:\n```python\ns = \\\"hello\\\"\ntry:\n    s[0] = \\\"H\\\"\nexcept TypeError:\n    print(\\\"Error\\\")\n```\n\n### JavaScript:\n```javascript\nlet s = \\\"hello\\\";\ntry {\n    s[0] = \\\"H\\\";\n    console.log(s);\n} catch (e) {\n    console.log(\\\"Error\\\");\n}\n```\n///\nWhat happens when attempting to mutate a string character directly by index?"
+    },
+    {
+      "id": 413,
+      "text": "Obyektləri age xassəsinə (property) görə sort etdikdə nəticə nə olur?\n\n### Python:\n```python\npeople = [{'name': 'A', 'age': 30}, {'name': 'B', 'age': 20}]\npeople.sort(key=lambda x: x['age'])\nprint(people[0]['name'])\n```\n\n### JavaScript:\n```javascript\nconst people = [{name: 'A', age: 30}, {name: 'B', age: 20}];\npeople.sort((a, b) => a.age - b.age);\nconsole.log(people[0].name);\n```\n///\nWhat is the result when sorting objects by the age property?"
+    },
+    {
+      "id": 414,
+      "text": "4 üçün rekursiv çağırışın faktorial nəticəsi nədir?\n\n### Python:\n```python\ndef fact(n):\n    return 1 if n <= 1 else n * fact(n - 1)\nprint(fact(4))\n```\n\n### JavaScript:\n```javascript\nfunction fact(n) {\n    return n <= 1 ? 1 : n * fact(n - 1);\n}\nconsole.log(fact(4));\n```\n///\nWhat is the factorial result of the recursive call for 4?"
+    },
+    {
+      "id": 415,
+      "text": "Static / class method çağırışının nəticəsi nədir?\n\n### Python:\n```python\nclass MathUtils:\n    @staticmethod\n    def add(a, b):\n        return a + b\nprint(MathUtils.add(3, 7))\n```\n\n### JavaScript:\n```javascript\nclass MathUtils {\n    static add(a, b) {\n        return a + b;\n    }\n}\nconsole.log(MathUtils.add(3, 7));\n```\n///\nWhat is the result of calling a static/class method?"
+    },
+    {
+      "id": 416,
+      "text": "Getter property-yə müraciət etdikdə nəticə nə olur?\n\n### Python:\n```python\nclass Circle:\n    def __init__(self, r):\n        self.r = r\n    @property\n    def area(self):\n        return 3.14 * self.r * self.r\nc = Circle(2)\nprint(c.area)\n```\n\n### JavaScript:\n```javascript\nclass Circle {\n    constructor(r) {\n        this.r = r;\n    }\n    get area() {\n        return 3.14 * this.r * this.r;\n    }\n}\nconst c = new Circle(2);\nconsole.log(c.area);\n```\n///\nWhat is the result when accessing a getter property?"
+    },
+    {
+      "id": 417,
+      "text": "Çoxlu qiymətlər (multiple items) qaytarıldıqda nəticə nə olur?\n\n### Python:\n```python\ndef get_point():\n    return 5, 10\nx, y = get_point()\nprint(x * y)\n```\n\n### JavaScript:\n```javascript\nfunction getPoint() {\n    return [5, 10];\n}\nconst [x, y] = getPoint();\nconsole.log(x * y);\n```\n///\nWhat is the result when returning multiple items from a function?"
+    },
+    {
+      "id": 418,
+      "text": "0 və boş string üçün falsy check müqayisəsinin nəticəsi nədir?\n\n### Python:\n```python\nprint(bool(0) == bool(\\\"\\\"))\n```\n\n### JavaScript:\n```javascript\nconsole.log(Boolean(0) === Boolean(\\\"\\\"));\n```\n///\nWhat is the result of the falsy check comparison between 0 and empty string?"
+    },
+    {
+      "id": 419,
+      "text": "enumerate / forEach vasitəsilə indeks və qiymət üzrə iterasiya etdikdə nə çap olunur?\n\n### Python:\n```python\nitems = ['x', 'y']\nres = []\nfor i, v in enumerate(items):\n    res.append(f\\\"{i}:{v}\\\")\nprint(\\\",\\\".join(res))\n```\n\n### JavaScript:\n```javascript\nconst items = ['x', 'y'];\nconst res = [];\nitems.forEach((v, i) => res.push(`${i}:${v}`));\nconsole.log(res.join(\\\",\\\"));\n```\n///\nWhat is printed when iterating over index and value via enumerate / forEach?"
+    },
+    {
+      "id": 420,
+      "text": "a və b dəyişənlərinin dəyişdirilmiş (swapped) qiymətləri nədir?\n\n### Python:\n```python\na, b = 1, 2\na, b = b, a\nprint(a, b)\n```\n\n### JavaScript:\n```javascript\nlet a = 1, b = 2;\n[a, b] = [b, a];\nconsole.log(a, b);\n```\n///\nWhat are the swapped values of variables a and b?"
+    },
+    {
+      "id": 421,
+      "text": "Mövcud olmayan property/key-ə müraciət etdikdə nə baş verir?\n\n### Python:\n```python\nd = {'a': 1}\ntry:\n    print(d['b'])\nexcept KeyError:\n    print(\\\"MissingKey\\\")\n```\n\n### JavaScript:\n```javascript\nconst obj = { a: 1 };\nif (obj.b === undefined) {\n    console.log(\\\"MissingKey\\\");\n}\n```\n///\nWhat happens when accessing a non-existent property/key?"
+    },
+    {
+      "id": 422,
+      "text": "Dövriyyə bloku (loop block) daxilində dəyişən elan edildikdə nəticə nə olur?\n\n### Python:\n```python\nfor i in range(3):\n    pass\nprint(i)\n```\n\n### JavaScript:\n```javascript\nfor (var i = 0; i < 3; i++) {}\nconsole.log(i);\n```\n///\nWhat is the scope/value of the loop variable after the loop terminates?"
+    },
+    {
+      "id": 423,
+      "text": "Funksiyalarda default mutable parametr istifadəsinin tələsi (trap) nədir?\n\n### Python:\n```python\ndef add_item(val, lst=[]):\n    lst.append(val)\n    return lst\n\nadd_item(1)\nprint(add_item(2))\n```\n\n### JavaScript:\n```javascript\nfunction addItem(val, lst = []) {\n    lst.push(val);\n    return lst;\n}\n\naddItem(1);\nconsole.log(addItem(2));\n```\n///\nWhat is the trap of using a mutable default parameter in functions?"
+    },
+    {
+      "id": 424,
+      "text": "[ [1, 2], [3, 4] ] 2D matrisini düzləşdirəndə (flattening) nəticə nə olur?\n\n### Python:\n```python\nmatrix = [[1, 2], [3, 4]]\nflat = [x for row in matrix for x in row]\nprint(flat)\n```\n\n### JavaScript:\n```javascript\nconst matrix = [[1, 2], [3, 4]];\nconst flat = matrix.flat();\nconsole.log(flat);\n```\n///\nWhat is the result when flattening the 2D matrix [[1, 2], [3, 4]]?"
+    },
+    {
+      "id": 425,
+      "text": "'hello' daxilində mövcud olmayan 'z' substring-inin indeksi axtarıldıqda nə qaytarılır?\n\n### Python:\n```python\ns = \\\"hello\\\"\nprint(s.find(\\\"z\\\"))\n```\n\n### JavaScript:\n```javascript\nconst s = \\\"hello\\\";\nconsole.log(s.indexOf(\\\"z\\\"));\n```\n///\nWhat is returned when searching for non-existent substring 'z' in 'hello'?"
+    },
+    {
+      "id": 426,
+      "text": "'apple' string-inin 'ap' ilə başlayıb-başlamadığını yoxladıqda (startswith) nəticə nə olur?\n\n### Python:\n```python\ns = \\\"apple\\\"\nprint(s.startswith(\\\"ap\\\"))\n```\n\n### JavaScript:\n```javascript\nconst s = \\\"apple\\\";\nconsole.log(s.startsWith(\\\"ap\\\"));\n```\n///\nWhat is the result of checking if 'apple' starts with 'ap'?"
+    },
+    {
+      "id": 427,
+      "text": "{1, 2} və {2, 3} set-lərinin kəsişməsini (set intersection) yoxladıqda nəticə nə olur?\n\n### Python:\n```python\ns1 = {1, 2}\ns2 = {2, 3}\nprint(list(s1 & s2))\n```\n\n### JavaScript:\n```javascript\nconst s1 = new Set([1, 2]);\nconst s2 = new Set([2, 3]);\nconst res = [...s1].filter(x => s2.has(x));\nconsole.log(res);\n```\n///\nWhat is the intersection of sets {1, 2} and {2, 3}?"
+    },
+    {
+      "id": 428,
+      "text": "7 ədədi üçün 3 uzunluğunda sıfırlarla tamamlanmış (padded zero) string nəticəsi nədir?\n\n### Python:\n```python\nprint(\\\"7\\\".zfill(3))\n```\n\n### JavaScript:\n```javascript\nconsole.log(\\\"7\\\".padStart(3, '0'));\n```\n///\nWhat is the zero-padded string of length 3 for the number 7?"
+    },
+    {
+      "id": 429,
+      "text": "Exception / error handling bloku tərəfindən hansı mesaj çap olunur?\n\n### Python:\n```python\ntry:\n    res = 10 / 0\nexcept ZeroDivisionError:\n    print(\\\"ZeroErr\\\")\n```\n\n### JavaScript:\n```javascript\ntry {\n    if (0 === 0) throw new Error(\\\"ZeroErr\\\");\n} catch (e) {\n    console.log(e.message);\n}\n```\n///\nWhich message is printed by the exception/error handling block?"
+    },
+    {
+      "id": 430,
+      "text": "Child class daxilində super constructor çağırıldıqda nəticə nə olur?\n\n### Python:\n```python\nclass Parent:\n    def __init__(self):\n        self.role = \\\"User\\\"\n\nclass Child(Parent):\n    def __init__(self):\n        super().__init__()\n        self.name = \\\"Bob\\\"\n\nc = Child()\nprint(c.role)\n```\n\n### JavaScript:\n```javascript\nclass Parent {\n    constructor() {\n        this.role = \\\"User\\\";\n    }\n}\nclass Child extends Parent {\n    constructor() {\n        super();\n        this.name = \\\"Bob\\\";\n    }\n}\nconst c = new Child();\nconsole.log(c.role);\n```\n///\nWhat is the result when calling the super constructor inside a child class?"
+    },
+    {
+      "id": 431,
+      "text": "İlkin HTML-i serverdə render edən və interaktivlik üçün client-də JavaScript event handler-lərini qoşan veb arxitektura nümunəsi hansıdır?\n///\nWhich web architecture renders initial HTML on the server and attaches client-side JavaScript event handlers for interactivity?"
+    },
+    {
+      "id": 432,
+      "text": "Keşdə olan faylları dərhal qaytaran və arxa fonda təzə məzmunu yükləyərək keşi yeniləyən Service Worker caching strategiyası hansıdır?\n///\nWhich Service Worker caching strategy immediately serves cached content and updates the cache in the background?"
+    },
+    {
+      "id": 433,
+      "text": "TCP üzərində HTTP/1.1 və HTTP/2-də olan hansı nəqliyyat qatı (transport-layer) darboğazı UDP üzərində QUIC istifadə edən HTTP/3 tərəfindən həll edilir?\n///\nWhich transport-layer bottleneck in HTTP/1.1 and HTTP/2 over TCP is resolved by HTTP/3 using QUIC over UDP?"
+    },
+    {
+      "id": 434,
+      "text": "Tək bir uzunmüddətli TCP bağlantısı üzərindən ikitərəfli, real-vaxt (real-time) əlaqəni təmin edən veb API texnologiyası hansıdır?\n///\nWhich Web API technology provides full-duplex, real-time communication over a single long-lived TCP connection?"
+    },
+    {
+      "id": 435,
+      "text": "XSS hücumlarının qarşısını almaq üçün skriptlər, üslublar və şəkillər üçün icazə verilən mənbə domenlərini göstərən HTTP təhlükəsizlik başlığı (security header) hansıdır?\n///\nWhich HTTP security header specifies allowed source domains for scripts, styles, and images to mitigate XSS attacks?"
+    },
+    {
+      "id": 436,
+      "text": "Dövriyyə daxilində yaradılmış closure funksiyaları icra edildikdə nəticə nə olur?\n\n### Python:\n```python\nfuncs = [lambda: i for i in range(3)]\nprint([f() for f in funcs])\n```\n\n### JavaScript:\n```javascript\nconst funcs = [];\nfor (var i = 0; i < 3; i++) {\n    funcs.push(() => i);\n}\nconsole.log(funcs.map(f => f()));\n```\n///\nWhat is the output when executing closure functions created inside a loop?"
+    },
+    {
+      "id": 437,
+      "text": "Promise-lər/async microtask-lar ilə sinxron kodun icra ardıcıllığı necədir?\n\n### Python:\n```python\nprint(\\\"1\\\")\n# Synchronous setup\nprint(\\\"2\\\")\n```\n\n### JavaScript:\n```javascript\nconsole.log(\\\"1\\\");\nPromise.resolve().then(() => console.log(\\\"3\\\"));\nconsole.log(\\\"2\\\");\n```\n///\nWhat is the execution order of synchronous code versus Promises/microtasks?"
+    },
+    {
+      "id": 438,
+      "text": "Generator funksiyasından qiymətlər qaytarıldıqda (yield) nəticə nə olur?\n\n### Python:\n```python\ndef gen():\n    yield 1\n    yield 2\ng = gen()\nprint(next(g) + next(g))\n```\n\n### JavaScript:\n```javascript\nfunction* gen() {\n    yield 1;\n    yield 2;\n}\nconst g = gen();\nconsole.log(g.next().value + g.next().value);\n```\n///\nWhat is the result when values are yielded from a generator function?"
+    },
+    {
+      "id": 439,
+      "text": "type() / Object.create() vasitəsilə dinamik class yaratdıqda nəticə nə olur?\n\n### Python:\n```python\nFoo = type('Foo', (), {'val': 42})\nf = Foo()\nprint(f.val)\n```\n\n### JavaScript:\n```javascript\nconst Foo = Object.create({}, { val: { value: 42 } });\nconsole.log(Foo.val);\n```\n///\nWhat is the result when creating a dynamic class/object via type() or Object.create()?"
+    },
+    {
+      "id": 440,
+      "text": "Təkrar çağırışlarda memoized function wrapper-in davranışı necədir?\n\n### Python:\n```python\ndef memoize(fn):\n    cache = {}\n    def wrapper(n):\n        if n not in cache:\n            cache[n] = fn(n)\n        return cache[n]\n    return wrapper\n\n@memoize\ndef double(n):\n    return n * 2\n\nprint(double(5) + double(5))\n```\n\n### JavaScript:\n```javascript\nfunction memoize(fn) {\n    const cache = {};\n    return function(n) {\n        if (!(n in cache)) cache[n] = fn(n);\n        return cache[n];\n    };\n}\nconst double = memoize(n => n * 2);\nconsole.log(double(5) + double(5));\n```\n///\nWhat is the result of method lookup along the MRO / prototype chain?"
+    },
+    {
+      "id": 441,
+      "text": "Shallow copy daxilindəki iç-içə list (nested list) dəyişdirildikdə nə baş verir?\n\n### Python:\n```python\na = [[1], [2]]\nb = a.copy()\nb[0].append(99)\nprint(a[0])\n```\n\n### JavaScript:\n```javascript\nconst a = [[1], [2]];\nconst b = [...a];\nb[0].push(99);\nconsole.log(a[0]);\n```\n///\nWhat is the execution order of Microtasks (Promise) and Macrotasks (setTimeout)?"
+    },
+    {
+      "id": 442,
+      "text": "Keşlənmiş kiçik integer/string-lər üçün identity check (is / ===) ilə yeni instance-lar arasındakı fərq nədir?\n\n### Python:\n```python\na = [1]\nb = [1]\nprint(a is b, a == b)\n```\n\n### JavaScript:\n```javascript\nconst a = [1];\nconst b = [1];\nconsole.log(a === b, JSON.stringify(a) === JSON.stringify(b));\n```\n///\nWhat is the concurrent execution result of Promise.all() / asyncio.gather()?"
+    },
+    {
+      "id": 443,
+      "text": "Dinamik ifadə string-i (dynamic expression) qiymətləndirildikdə nəticə nə olur?\n\n### Python:\n```python\ncode = \\\"x = 10; y = 20; res = x + y\\\"\nloc = {}\nexec(code, {}, loc)\nprint(loc['res'])\n```\n\n### JavaScript:\n```javascript\nconst res = eval(\\\"const x = 10; const y = 20; x + y;\\\");\nconsole.log(res);\n```\n///\nWhat happens when mutating a list/array while iterating over it?"
+    },
+    {
+      "id": 444,
+      "text": "Dəyişənə lokal mənimsədilmədən öncə müraciət etdikdə (UnboundLocalError / TDZ) nə baş verir?\n\n### Python:\n```python\nx = 10\ndef test():\n    try:\n        print(x)\n        x = 20\n    except UnboundLocalError:\n        print(\\\"UnboundErr\\\")\ntest()\n```\n\n### JavaScript:\n```javascript\nlet x = 10;\nfunction test() {\n    try {\n        console.log(x);\n        let x = 20;\n    } catch (e) {\n        console.log(\\\"UnboundErr\\\");\n    }\n}\ntest();\n```\n///\nWhat happens when attempting to add a new attribute to a class defining __slots__?"
+    },
+    {
+      "id": 445,
+      "text": "Xüsusi Iterable obyekti yaratdıqda nəticə nə olur?\n\n### Python:\n```python\nclass CountDown:\n    def __init__(self, start):\n        self.start = start\n    def __iter__(self):\n        return self\n    def __next__(self):\n        if self.start <= 0:\n            raise StopIteration\n        self.start -= 1\n        return self.start + 1\n\nprint(list(CountDown(2)))\n```\n\n### JavaScript:\n```javascript\nconst countDown = {\n    [Symbol.iterator]() {\n        let count = 2;\n        return {\n            next() {\n                if (count > 0) return { value: count--, done: false };\n                return { done: true };\n            }\n        };\n    }\n};\nconsole.log([...countDown]);\n```\n///\nWhat is the output of managing attributes via a descriptor / getter-setter?"
+    },
+    {
+      "id": 446,
+      "text": "Context manager / try-finally təmizləmə (cleanup) icra ardıcıllığı necədir?\n\n### Python:\n```python\nclass Resource:\n    def __enter__(self):\n        print(\\\"A\\\", end=\\\"\\\")\n        return self\n    def __exit__(self, *args):\n        print(\\\"C\\\", end=\\\"\\\")\n\nwith Resource():\n    print(\\\"B\\\", end=\\\"\\\")\n```\n\n### JavaScript:\n```javascript\nfunction withResource(fn) {\n    process.stdout.write(\\\"A\\\");\n    try {\n        fn();\n    } finally {\n        process.stdout.write(\\\"C\\\");\n    }\n}\nwithResource(() => process.stdout.write(\\\"B\\\"));\n```\n///\nWhat does a weak reference return after the referenced object is garbage-collected?"
+    },
+    {
+      "id": 447,
+      "text": "Zəncirvari funksiya dekoratorlarının (chained function decorators) icra ardıcıllığı necədir?\n\n### Python:\n```python\ndef dec1(fn):\n    return lambda: \\\"1\\\" + fn()\n\ndef dec2(fn):\n    return lambda: \\\"2\\\" + fn()\n\n@dec1\n@dec2\ndef base():\n    return \\\"X\\\"\n\nprint(base())\n```\n\n### JavaScript:\n```javascript\nconst dec1 = fn => () => \\\"1\\\" + fn();\nconst dec2 = fn => () => \\\"2\\\" + fn();\nconst base = dec1(dec2(() => \\\"X\\\"));\nconsole.log(base());\n```\n///\nWhat is the result of comparing NaN with itself (NaN == NaN)?"
+    },
+    {
+      "id": 448,
+      "text": "Instance-lar tərəfindən paylaşılan class səviyyəli mutable atribut dəyişdirildikdə nə baş verir?\n\n### Python:\n```python\nclass Dog:\n    tricks = []\n\nd1 = Dog()\nd2 = Dog()\nd1.tricks.append(\\\"bark\\\")\nprint(len(d2.tricks))\n```\n\n### JavaScript:\n```javascript\nclass Dog {}\nDog.prototype.tricks = [];\nconst d1 = new Dog();\nconst d2 = new Dog();\nd1.tricks.push(\\\"bark\\\");\nconsole.log(d2.tricks.length);\n```\n///\nWhat is the exact result of the floating-point addition 0.1 + 0.2?"
+    },
+    {
+      "id": 449,
+      "text": "n ədədinin 2-nin qüvvəti olub-olmadığını yoxlayan bitwise trick nədir?\n\n### Python:\n```python\ndef is_power_of_two(n):\n    return n > 0 and (n & (n - 1)) == 0\nprint(is_power_of_two(8), is_power_of_two(6))\n```\n\n### JavaScript:\n```javascript\nfunction isPowerOfTwo(n) {\n    return n > 0 && (n & (n - 1)) === 0;\n}\nconsole.log(isPowerOfTwo(8), isPowerOfTwo(6));\n```\n///\nWhat is the result of the bitwise AND trick (n & (n - 1)) for checking powers of two?"
+    },
+    {
+      "id": 450,
+      "text": "Fibonaççi hesablanarkən tail call / deep recursion nəticəsi nə olur?\n\n### Python:\n```python\ndef fib(n, memo={}):\n    if n in memo: return memo[n]\n    if n <= 2: return 1\n    memo[n] = fib(n - 1, memo) + fib(n - 2, memo)\n    return memo[n]\nprint(fib(6))\n```\n\n### JavaScript:\n```javascript\nfunction fib(n, memo = {}) {\n    if (n in memo) return memo[n];\n    if (n <= 2) return 1;\n    memo[n] = fib(n - 1, memo) + fib(n - 2, memo);\n    return memo[n];\n}\nconsole.log(fib(6));\n```\n///\nWhat is the output of memoized recursive Fibonacci for n = 6?"
+    },
+    {
+      "id": 451,
+      "text": "Curried funksiya hissə-hissə (partially) çağırıldıqda nə baş verir?\n\n### Python:\n```python\ndef curry_add(a):\n    return lambda b: lambda c: a + b + c\nprint(curry_add(1)(2)(3))\n```\n\n### JavaScript:\n```javascript\nconst curryAdd = a => b => c => a + b + c;\nconsole.log(curryAdd(1)(2)(3));\n```\n///\nWhat happens when a curried function is called partially?"
+    },
+    {
+      "id": 452,
+      "text": "Dərindən iç-içə olan [1, [2, [3, [4]]]] array-ini rekursiv olaraq düzləşdirəndə (flattening) nəticə nə olur?\n\n### Python:\n```python\ndef deep_flatten(lst):\n    res = []\n    for item in lst:\n        if isinstance(item, list):\n            res.extend(deep_flatten(item))\n        else:\n            res.append(item)\n    return res\n\nprint(deep_flatten([1, [2, [3, [4]]]]))\n```\n\n### JavaScript:\n```javascript\nconst arr = [1, [2, [3, [4]]]];\nconsole.log(arr.flat(Infinity));\n```\n///\nWhat is the result of recursively flattening the nested array [1, [2, [3, [4]]]]?"
+    },
+    {
+      "id": 453,
+      "text": "Əvəzedici (fallback) property müraciəti üçün Proxy / __getattr__ istifadə etdikdə nəticə nə olur?\n\n### Python:\n```python\nclass DynamicDict:\n    def __getattr__(self, name):\n        return name.upper()\n\nd = DynamicDict()\nprint(d.hello)\n```\n\n### JavaScript:\n```javascript\nconst d = new Proxy({}, {\n    get(target, prop) {\n        return prop.toUpperCase();\n    }\n});\nconsole.log(d.hello);\n```\n///\nWhat is the output when using Proxy / __getattr__ for fallback property access?"
+    },
+    {
+      "id": 454,
+      "text": "Dondurulmuş obyekt (frozen object) / read-only property-ni dəyişməyə cəhd etdikdə nə baş verir?\n\n### Python:\n```python\nclass Immutable:\n    def __setattr__(self, name, val):\n        raise AttributeError(\\\"Read-only\\\")\n\nobj = Immutable()\ntry:\n    obj.x = 10\nexcept AttributeError:\n    print(\\\"Frozen\\\")\n```\n\n### JavaScript:\n```javascript\nconst obj = Object.freeze({ x: 5 });\ntry {\n    obj.x = 10;\n    console.log(obj.x);\n} catch (e) {\n    console.log(\\\"Frozen\\\");\n}\n```\n///\nWhat happens when attempting to mutate a frozen object / read-only property?"
+    },
+    {
+      "id": 455,
+      "text": "İstənilən integer üzərində bitwise XOR əməliyyatının x ^ x nəticəsi nədir?\n\n### Python:\n```python\nx = 255\nprint(x ^ x)\n```\n\n### JavaScript:\n```javascript\nconst x = 255;\nconsole.log(x ^ x);\n```\n///\nWhat is the result of the bitwise XOR operation x ^ x on any integer?"
+    },
+    {
+      "id": 456,
+      "text": "Tip iyerarxiyası (type hierarchy) ilə isinstance yoxlamasının nəticəsi nədir?\n\n### Python:\n```python\nclass A: pass\nclass B(A): pass\nb = B()\nprint(isinstance(b, A), type(b) == A)\n```\n\n### JavaScript:\n```javascript\nclass A {}\nclass B extends A {}\nconst b = new B();\nconsole.log(b instanceof A, b.constructor === A);\n```\n///\nWhat is the result of isinstance check with type hierarchy?"
+    },
+    {
+      "id": 457,
+      "text": "isinstance(type, object) və isinstance(object, type) yoxlamaları zamanı nə alınır?\n\n### Python:\n```python\nprint(isinstance(type, object), isinstance(object, type))\n```\n\n### JavaScript:\n```javascript\nconsole.log(typeof Object === 'function', typeof Function === 'function');\n```\n///\nWhat is returned when evaluating isinstance(type, object) and isinstance(object, type)?"
+    },
+    {
+      "id": 458,
+      "text": "Xarici funksiya sahəsindəki (outer scope) non-local dəyişəni dəyişdikdə nə baş verir?\n\n### Python:\n```python\ndef outer():\n    x = 10\n    def inner():\n        nonlocal x\n        x += 5\n    inner()\n    return x\nprint(outer())\n```\n\n### JavaScript:\n```javascript\nfunction outer() {\n    let x = 10;\n    function inner() {\n        x += 5;\n    }\n    inner();\n    return x;\n}\nconsole.log(outer());\n```\n///\nWhat happens when mutating an outer scope non-local variable?"
+    },
+    {
+      "id": 459,
+      "text": "Metaclass __call__ instance yaradılmasını (construction) kəsdikdə (intercept) nə baş verir?\n\n### Python:\n```python\nclass Meta(type):\n    def __call__(cls, *args, **kwargs):\n        return \\\"Intercepted\\\"\n\nclass Target(metaclass=Meta):\n    pass\n\nt = Target()\nprint(t)\n```\n\n### JavaScript:\n```javascript\nclass Target {}\nconst TargetProxy = new Proxy(Target, {\n    construct() {\n        return { message: \\\"Intercepted\\\" };\n    }\n});\nconst t = new TargetProxy();\nconsole.log(t.message || t);\n```\n///\nWhat happens when metaclass __call__ intercepts instance construction?"
+    },
+    {
+      "id": 460,
+      "text": "Dondurulmuş data strukturları üçün dərindən müqayisə (deep comparison) və reference identity müqayisəsinin nəticəsi nədir?\n\n### Python:\n```python\nfrom dataclasses import dataclass\n@dataclass(frozen=True)\nclass Point:\n    x: int\n    y: int\n\np1 = Point(1, 2)\np2 = Point(1, 2)\nprint(p1 == p2, p1 is p2)\n```\n\n### JavaScript:\n```javascript\nconst p1 = Object.freeze({ x: 1, y: 2 });\nconst p2 = Object.freeze({ x: 1, y: 2 });\nconsole.log(JSON.stringify(p1) === JSON.stringify(p2), p1 === p2);\n```\n///\nWhat is the result of deep comparison and reference identity comparison for frozen data structures?"
+    }
+  ],
+  "answers": [
+    {
+      "id": 1053,
+      "text": "Ulduz /// Star"
+    },
+    {
+      "id": 1054,
+      "text": "Ay /// Moon"
+    },
+    {
+      "id": 1055,
+      "text": "Gündüz /// Day"
+    },
+    {
+      "id": 1056,
+      "text": "Səhər /// Morning"
+    },
+    {
+      "id": 1057,
+      "text": "Hündür /// Tall"
+    },
+    {
+      "id": 1058,
+      "text": "Qısa /// Short"
+    },
+    {
+      "id": 1059,
+      "text": "Geniş /// Wide"
+    },
+    {
+      "id": 1060,
+      "text": "Dar /// Narrow"
+    },
+    {
+      "id": 1061,
+      "text": "Cümə /// Friday"
+    },
+    {
+      "id": 1062,
+      "text": "Cümə axşamı /// Thursday"
+    },
+    {
+      "id": 1063,
+      "text": "Şənbə /// Saturday"
+    },
+    {
+      "id": 1064,
+      "text": "Bazar /// Sunday"
+    },
+    {
+      "id": 1065,
+      "text": "Çərşənbə /// Wednesday"
+    },
+    {
+      "id": 1066,
+      "text": "Cümə axşamı /// Thursday"
+    },
+    {
+      "id": 1067,
+      "text": "Cümə /// Friday"
+    },
+    {
+      "id": 1068,
+      "text": "Şənbə /// Saturday"
+    },
+    {
+      "id": 1077,
+      "text": "Nənə /// Grandmother"
+    },
+    {
+      "id": 1078,
+      "text": "Qız /// Daughter"
+    },
+    {
+      "id": 1079,
+      "text": "Bibi /// Paternal Aunt"
+    },
+    {
+      "id": 1080,
+      "text": "Xala /// Maternal Aunt"
+    },
+    {
+      "id": 1129,
+      "text": "Cümə axşamı /// Thursday"
+    },
+    {
+      "id": 1130,
+      "text": "Cümə /// Friday"
+    },
+    {
+      "id": 1131,
+      "text": "Şənbə /// Saturday"
+    },
+    {
+      "id": 1132,
+      "text": "Bazar /// Sunday"
+    },
+    {
+      "id": 1165,
+      "text": "Cənub /// South"
+    },
+    {
+      "id": 1166,
+      "text": "Şərq /// East"
+    },
+    {
+      "id": 1167,
+      "text": "Qərb /// West"
+    },
+    {
+      "id": 1168,
+      "text": "Şimal-Şərq /// Northeast"
+    },
+    {
+      "id": 1237,
+      "text": "Tülkü /// Fox"
+    },
+    {
+      "id": 1238,
+      "text": "Canavar /// Wolf"
+    },
+    {
+      "id": 1239,
+      "text": "Ayı /// Bear"
+    },
+    {
+      "id": 1240,
+      "text": "Qartal /// Eagle"
+    },
+    {
+      "id": 1285,
+      "text": "Nəvəsi /// Grandchild"
+    },
+    {
+      "id": 1286,
+      "text": "Qardaşı /// Brother"
+    },
+    {
+      "id": 1287,
+      "text": "Qızı /// Daughter"
+    },
+    {
+      "id": 1288,
+      "text": "Anası /// Mother"
+    },
+    {
+      "id": 1297,
+      "text": "Omonim /// Homonym"
+    },
+    {
+      "id": 1298,
+      "text": "Palindrom /// Palindrome"
+    },
+    {
+      "id": 1299,
+      "text": "Sinoqram /// Sinogram"
+    },
+    {
+      "id": 1300,
+      "text": "Anaqram /// Anagram"
+    },
+    {
+      "id": 1312,
+      "text": "Həm 0, həm 1 /// Both 0 and 1"
+    },
+    {
+      "id": 1313,
+      "text": "Çərşənbə /// Wednesday"
+    },
+    {
+      "id": 1314,
+      "text": "Cümə axşamı /// Thursday"
+    },
+    {
+      "id": 1315,
+      "text": "Cümə /// Friday"
+    },
+    {
+      "id": 1316,
+      "text": "Şənbə /// Saturday"
+    },
+    {
+      "id": 1353,
+      "text": "1-ci /// 1st"
+    },
+    {
+      "id": 1354,
+      "text": "2-ci /// 2nd"
+    },
+    {
+      "id": 1355,
+      "text": "3-cü /// 3rd"
+    },
+    {
+      "id": 1356,
+      "text": "Sonuncu /// Last"
+    },
+    {
+      "id": 1357,
+      "text": "Sondan ikinci /// Second to last"
+    },
+    {
+      "id": 1358,
+      "text": "Axırıncı /// Last"
+    },
+    {
+      "id": 1359,
+      "text": "Sondan üçüncü /// Third to last"
+    },
+    {
+      "id": 1360,
+      "text": "Mümkün deyil /// Not possible"
+    },
+    {
+      "id": 1372,
+      "text": "Belə bir şey mümkün deyil /// Not possible"
+    },
+    {
+      "id": 1384,
+      "text": "Məlum deyil /// Unknown"
+    },
+    {
+      "id": 1389,
+      "text": "Biri balıq yemədi /// One did not eat fish"
+    },
+    {
+      "id": 1390,
+      "text": "Onlar Baba, Ata və Oğul idi /// They were Grandfather, Father, and Son"
+    },
+    {
+      "id": 1391,
+      "text": "Biri balığı gizlətdi /// One hid a fish"
+    },
+    {
+      "id": 1392,
+      "text": "Səhv hesablanıb /// Miscalculated"
+    },
+    {
+      "id": 1405,
+      "text": "Bəli, ehtimal nəzəriyyəsi ilə /// Yes, by probability theory"
+    },
+    {
+      "id": 1406,
+      "text": "Xeyr, mümkün deyil /// No, not possible"
+    },
+    {
+      "id": 1407,
+      "text": "Bəli, temperatur (istilik) vasitəsilə /// Yes, through heat/temperature"
+    },
+    {
+      "id": 1408,
+      "text": "Yalnız 2 lampanı tapmaq olar /// Only 2 bulbs can be identified"
+    }
+  ]
+}

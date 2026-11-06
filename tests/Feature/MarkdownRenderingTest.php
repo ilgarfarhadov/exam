@@ -157,3 +157,40 @@ it('returns admin-typed tags as literal preview text', function () {
     expect(MarkdownRenderer::plainText('Trick: <script>alert(1)</script>'))
         ->toBe('Trick: <script>alert(1)</script>');
 });
+
+it('renders bilingual questions with az and en sections', function () {
+    $rendered = MarkdownRenderer::render("Sual mətni\n///\nQuestion text");
+
+    expect($rendered)
+        ->toContain('ps-bilingual')
+        ->toContain('ps-bilingual-az')
+        ->toContain('Sual mətni')
+        ->toContain('ps-bilingual-en')
+        ->toContain('Question text')
+        ->toContain('ps-bilingual-badge');
+});
+
+it('renders bilingual answer options inline with a separator', function () {
+    $rendered = MarkdownRenderer::renderInline('Bəli /// Yes');
+
+    expect($rendered)
+        ->toContain('ps-bilingual-inline')
+        ->toContain('ps-bilingual-az')
+        ->toContain('Bəli')
+        ->toContain('ps-bilingual-sep')
+        ->toContain('ps-bilingual-en')
+        ->toContain('Yes');
+});
+
+it('renders bilingual questions with common code blocks properly', function () {
+    $text = "Sual mətni\n///\nQuestion text\n\n```python\nprint(1)\n```";
+    $rendered = MarkdownRenderer::render($text);
+
+    expect($rendered)
+        ->toContain('ps-bilingual-az')
+        ->toContain('Sual mətni')
+        ->toContain('ps-bilingual-en')
+        ->toContain('Question text')
+        ->toContain('ps-bilingual-common')
+        ->toContain('print(1)');
+});

@@ -53,7 +53,69 @@ class MarkdownRenderer
             return '';
         }
 
+        if (str_contains($text, '///')) {
+            $parsed = self::parseBilingual($text);
+            $renderedAz = self::getConverter()->convert($parsed['az'])->getContent();
+            $renderedEn = $parsed['en'] !== null && $parsed['en'] !== ''
+                ? self::getConverter()->convert($parsed['en'])->getContent()
+                : '';
+            $renderedCommon = $parsed['common'] !== null && $parsed['common'] !== ''
+                ? self::getConverter()->convert($parsed['common'])->getContent()
+                : '';
+
+            $output = '<div class="ps-bilingual">';
+            $output .= '<div class="ps-bilingual-az">' . $renderedAz . '</div>';
+            if ($renderedEn !== '') {
+                $output .= '<div class="ps-bilingual-en"><span class="badge ps-bilingual-badge me-2">EN</span>' . $renderedEn . '</div>';
+            }
+            $output .= '</div>';
+
+            if ($renderedCommon !== '') {
+                $output .= '<div class="ps-bilingual-common mt-2">' . $renderedCommon . '</div>';
+            }
+
+            return $output;
+        }
+
         return self::getConverter()->convert($text)->getContent();
+    }
+
+    /**
+     * Parse bilingual content separated by '///'.
+     *
+     * @return array{az: string, en: ?string, common: ?string}
+     */
+    public static function parseBilingual(string $text): array
+    {
+        if (! str_contains($text, '///')) {
+            return ['az' => $text, 'en' => null, 'common' => null];
+        }
+
+        $parts = explode('///', $text);
+        if (count($parts) >= 3) {
+            return [
+                'az' => trim($parts[0]),
+                'en' => trim($parts[1]),
+                'common' => trim(implode('///', array_slice($parts, 2))),
+            ];
+        }
+
+        $az = trim($parts[0]);
+        $rest = trim($parts[1]);
+
+        if (preg_match('/^(.*?)\n\n(###?\s+.*|```.*)$/s', $rest, $matches)) {
+            return [
+                'az' => $az,
+                'en' => trim($matches[1]),
+                'common' => trim($matches[2]),
+            ];
+        }
+
+        return [
+            'az' => $az,
+            'en' => $rest,
+            'common' => null,
+        ];
     }
 
     /**
@@ -66,7 +128,28 @@ class MarkdownRenderer
      */
     public static function renderInline(?string $text): string
     {
-        $html = \trim(self::render($text));
+        if ($text === null || $text === '') {
+            return '';
+        }
+
+        if (str_contains($text, '///')) {
+            $parts = explode('///', $text, 2);
+            $azHtml = self::renderInlinePart(trim($parts[0]));
+            $enHtml = self::renderInlinePart(trim($parts[1]));
+
+            return '<span class="ps-bilingual-inline">'
+                . '<span class="ps-bilingual-az">' . $azHtml . '</span>'
+                . ' <span class="ps-bilingual-sep text-muted mx-1">/</span> '
+                . '<span class="ps-bilingual-en text-muted">' . $enHtml . '</span>'
+                . '</span>';
+        }
+
+        return self::renderInlinePart($text);
+    }
+
+    private static function renderInlinePart(string $text): string
+    {
+        $html = \trim(self::getConverter()->convert($text)->getContent());
 
         if (\preg_match('/^<p>(.*)<\/p>$/s', $html, $matches) && ! \str_contains($matches[1], '<p>')) {
             return $matches[1];
@@ -87,18 +170,33 @@ class MarkdownRenderer
      */
     public static function plainText(?string $text, int $limit = 160): string
     {
-        $plain = \html_entity_decode(
-            \strip_tags(self::render($text)),
-            \ENT_QUOTES | \ENT_HTML5,
-            'UTF-8'
-        );
+        if ($text === null || $text === '') {
+            return '';
+        }
 
-        $plain = \trim((string) \preg_replace('/\s+/u', ' ', $plain));
+        if (str_contains($text, '///')) {
+            $parsed = self::parseBilingual($text);
+            $raw = $parsed['az'] . ($parsed['en'] ? ' / ' . $parsed['en'] : '') . ($parsed['common'] ? ' ' . $parsed['common'] : '');
+            $plain = self::cleanPlainText($raw);
+        } else {
+            $plain = self::cleanPlainText($text);
+        }
 
         if (\mb_strlen($plain) <= $limit) {
             return $plain;
         }
 
         return \rtrim(\mb_substr($plain, 0, $limit)).'…';
+    }
+
+    private static function cleanPlainText(string $text): string
+    {
+        $plain = \html_entity_decode(
+            \strip_tags(self::getConverter()->convert($text)->getContent()),
+            \ENT_QUOTES | \ENT_HTML5,
+            'UTF-8'
+        );
+
+        return \trim((string) \preg_replace('/\s+/u', ' ', $plain));
     }
 }

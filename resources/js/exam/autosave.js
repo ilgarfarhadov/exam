@@ -1,12 +1,3 @@
-/*!
- * Peerstack Exam System
- *
- * @author    Damir Pashayev <pashayevdamir@gmail.com>
- * @copyright 2026 Damir Pashayev. All rights reserved.
- * @license   Proprietary. All rights reserved.
- * @link      https://github.com/pasayevdemir
- */
-
 /**
  * Background autosave for MCQ selections, plus the queue that survives a
  * connection dropping out from under it.
@@ -15,9 +6,9 @@
  * answer ids, so one question's answer can never be submitted for another.
  */
 export function createAutosave({ url, queueKey, csrf, clock, doc = document }) {
-    const autosaveStatus = doc.getElementById('autosave-status');
-    const connectionDot = doc.getElementById('connection-dot');
-    const connectionLabel = doc.getElementById('connection-label');
+    const autosaveStatus = doc.getElementById("autosave-status");
+    const connectionDot = doc.getElementById("connection-dot");
+    const connectionLabel = doc.getElementById("connection-label");
 
     let autosaveSeq = 0;
     const questionAttemptSeq = {};
@@ -29,46 +20,54 @@ export function createAutosave({ url, queueKey, csrf, clock, doc = document }) {
 
     function setAutosaveStatus(text, cls) {
         autosaveStatus.textContent = text;
-        autosaveStatus.className = 'small mt-1 ' + cls;
+        autosaveStatus.className = "small mt-1 " + cls;
     }
 
     // sessionStorage, not localStorage - scoped to this tab/attempt, not meant
     // to survive across devices or outlive the session.
     function readQueue() {
         try {
-            return JSON.parse(sessionStorage.getItem(queueKey) || '[]');
+            return JSON.parse(sessionStorage.getItem(queueKey) || "[]");
         } catch (e) {
             return [];
         }
     }
 
     function queueAnswer(payload) {
-        const queue = readQueue().filter(item => item.question_id !== payload.question_id);
+        const queue = readQueue().filter(
+            (item) => item.question_id !== payload.question_id,
+        );
         queue.push(payload);
         sessionStorage.setItem(queueKey, JSON.stringify(queue));
     }
 
     function dequeueAnswer(questionId) {
-        const queue = readQueue().filter(item => item.question_id !== questionId);
+        const queue = readQueue().filter(
+            (item) => item.question_id !== questionId,
+        );
         sessionStorage.setItem(queueKey, JSON.stringify(queue));
     }
 
     function updateConnectionIndicator(state) {
         // state omitted -> derive from whether anything is still queued
         if (state === undefined) {
-            state = readQueue().length > 0 ? 'offline' : 'ok';
+            state = readQueue().length > 0 ? "offline" : "ok";
         }
 
         const styles = {
-            ok: ['bg-success', 'text-muted', 'Bağlantı var'],
-            retrying: ['bg-warning', 'text-warning', 'Yenidən cəhd edilir…'],
-            offline: ['bg-danger', 'text-danger', readQueue().length + ' cavab növbədə — yenidən cəhd ediləcək'],
+            ok: ["bg-success", "text-muted", "Bağlantı var"],
+            retrying: ["bg-warning", "text-warning", "Yenidən cəhd edilir…"],
+            offline: [
+                "bg-danger",
+                "text-danger",
+                readQueue().length + " cavab növbədə — yenidən cəhd ediləcək",
+            ],
         };
         const [dotClass, labelClass, label] = styles[state];
 
-        connectionDot.className = 'd-inline-block rounded-circle ' + dotClass;
-        connectionDot.style.width = '8px';
-        connectionDot.style.height = '8px';
+        connectionDot.className = "d-inline-block rounded-circle " + dotClass;
+        connectionDot.style.width = "8px";
+        connectionDot.style.height = "8px";
         connectionLabel.className = labelClass;
         connectionLabel.textContent = label;
     }
@@ -79,32 +78,39 @@ export function createAutosave({ url, queueKey, csrf, clock, doc = document }) {
     // could sit open indefinitely.
     function postAnswer(payload, timeoutMs) {
         const controller = new AbortController();
-        const timeoutId = timeoutMs ? setTimeout(() => controller.abort(), timeoutMs) : null;
+        const timeoutId = timeoutMs
+            ? setTimeout(() => controller.abort(), timeoutMs)
+            : null;
 
         return fetch(url, {
-            method: 'POST',
+            method: "POST",
             headers: {
-                'Content-Type': 'application/json',
-                Accept: 'application/json',
-                'X-CSRF-TOKEN': csrf.token(),
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "X-CSRF-TOKEN": csrf.token(),
             },
             body: JSON.stringify(payload),
             signal: controller.signal,
-        }).then(response => {
-            if (!response.ok) {
-                const err = new Error('autosave failed: ' + response.status);
-                err.status = response.status;
-                throw err;
-            }
+        })
+            .then((response) => {
+                if (!response.ok) {
+                    const err = new Error(
+                        "autosave failed: " + response.status,
+                    );
+                    err.status = response.status;
+                    throw err;
+                }
 
-            return response.json().catch(() => null);
-        }).then(data => {
-            if (data) {
-                clock.report(data.remaining_seconds);
-            }
-        }).finally(() => {
-            if (timeoutId) clearTimeout(timeoutId);
-        });
+                return response.json().catch(() => null);
+            })
+            .then((data) => {
+                if (data) {
+                    clock.report(data.remaining_seconds);
+                }
+            })
+            .finally(() => {
+                if (timeoutId) clearTimeout(timeoutId);
+            });
     }
 
     // A 409 (time limit reached) is a definitive answer, not a transient
@@ -121,14 +127,16 @@ export function createAutosave({ url, queueKey, csrf, clock, doc = document }) {
         options = options || {};
         const maxAttempts = options.maxAttempts || 3;
         const timeoutMs = options.timeoutMs;
-        const delayMs = options.delayMs || (attempt => Math.pow(2, attempt) * 1000);
+        const delayMs =
+            options.delayMs || ((attempt) => Math.pow(2, attempt) * 1000);
 
         function attempt(n) {
-            return postAnswer(payload, timeoutMs).catch(err => {
+            return postAnswer(payload, timeoutMs).catch((err) => {
                 if (err.status === 409 || n >= maxAttempts - 1) throw err;
 
-                return new Promise(resolve => setTimeout(resolve, delayMs(n)))
-                    .then(() => attempt(n + 1));
+                return new Promise((resolve) =>
+                    setTimeout(resolve, delayMs(n)),
+                ).then(() => attempt(n + 1));
             });
         }
 
@@ -142,7 +150,11 @@ export function createAutosave({ url, queueKey, csrf, clock, doc = document }) {
     // well under the countdown so it is never the thing that decides when we
     // submit.
     function postAnswerWithFastRetry(payload) {
-        return postAnswerWithRetry(payload, { maxAttempts: 2, timeoutMs: 2500, delayMs: () => 300 });
+        return postAnswerWithRetry(payload, {
+            maxAttempts: 2,
+            timeoutMs: 2500,
+            delayMs: () => 300,
+        });
     }
 
     // Builds the payload from an already-queried list of a question's inputs -
@@ -150,15 +162,20 @@ export function createAutosave({ url, queueKey, csrf, clock, doc = document }) {
     // question at once (finalizeAllAnswers) need different DOM access patterns
     // to stay efficient.
     function answerPayloadFromInputs(questionId, inputs) {
-        const checked = inputs.filter(i => i.checked).map(i => i.value);
+        const checked = inputs.filter((i) => i.checked).map((i) => i.value);
 
         return { question_id: questionId, answer_indexes: checked };
     }
 
     function autosaveAnswer(questionId) {
         const mySeq = ++autosaveSeq;
-        const myQSeq = questionAttemptSeq[questionId] = (questionAttemptSeq[questionId] || 0) + 1;
-        const inputs = doc.querySelectorAll('.question-input[data-question="' + questionId + '"]:not(.file-input)');
+        const myQSeq = (questionAttemptSeq[questionId] =
+            (questionAttemptSeq[questionId] || 0) + 1);
+        const inputs = doc.querySelectorAll(
+            '.question-input[data-question="' +
+                questionId +
+                '"]:not(.file-input)',
+        );
 
         if (inputs.length === 0) {
             return Promise.resolve();
@@ -166,8 +183,8 @@ export function createAutosave({ url, queueKey, csrf, clock, doc = document }) {
 
         const payload = answerPayloadFromInputs(questionId, Array.from(inputs));
 
-        setAutosaveStatus('Saxlanılır...', 'text-muted');
-        updateConnectionIndicator('retrying');
+        setAutosaveStatus("Saxlanılır...", "text-muted");
+        updateConnectionIndicator("retrying");
         inFlight.add(questionId);
 
         return postAnswerWithRetry(payload)
@@ -177,14 +194,16 @@ export function createAutosave({ url, queueKey, csrf, clock, doc = document }) {
                 if (questionAttemptSeq[questionId] !== myQSeq) return;
 
                 dequeueAnswer(questionId);
-                if (mySeq === autosaveSeq) setAutosaveStatus('Saxlanıldı', 'text-success');
+                if (mySeq === autosaveSeq)
+                    setAutosaveStatus("Saxlanıldı", "text-success");
                 updateConnectionIndicator();
             })
-            .catch(err => {
+            .catch((err) => {
                 if (questionAttemptSeq[questionId] !== myQSeq) return;
 
                 if (err && err.status === 409) {
-                    if (mySeq === autosaveSeq) setAutosaveStatus('Vaxt limiti bitdi', 'text-danger');
+                    if (mySeq === autosaveSeq)
+                        setAutosaveStatus("Vaxt limiti bitdi", "text-danger");
                     updateConnectionIndicator();
 
                     return;
@@ -192,9 +211,12 @@ export function createAutosave({ url, queueKey, csrf, clock, doc = document }) {
 
                 queueAnswer(payload);
                 if (mySeq === autosaveSeq) {
-                    setAutosaveStatus('Saxlanmadı — növbəyə alındı, avtomatik yenidən cəhd ediləcək', 'text-danger');
+                    setAutosaveStatus(
+                        "Saxlanmadı — növbəyə alındı, avtomatik yenidən cəhd ediləcək",
+                        "text-danger",
+                    );
                 }
-                updateConnectionIndicator('offline');
+                updateConnectionIndicator("offline");
             })
             .finally(() => {
                 // Only the newest attempt for this question clears the flag; an
@@ -213,7 +235,9 @@ export function createAutosave({ url, queueKey, csrf, clock, doc = document }) {
         // server, and the answer the student actually chose is then neither
         // saved nor left in the queue. If that live save fails it re-queues
         // itself, so nothing is dropped by waiting.
-        const queue = readQueue().filter(payload => !inFlight.has(payload.question_id));
+        const queue = readQueue().filter(
+            (payload) => !inFlight.has(payload.question_id),
+        );
 
         if (queue.length === 0) {
             updateConnectionIndicator();
@@ -221,21 +245,23 @@ export function createAutosave({ url, queueKey, csrf, clock, doc = document }) {
             return Promise.resolve();
         }
 
-        updateConnectionIndicator('retrying');
+        updateConnectionIndicator("retrying");
 
-        const sends = queue.map(payload => {
-            const myQSeq = questionAttemptSeq[payload.question_id] =
-                (questionAttemptSeq[payload.question_id] || 0) + 1;
+        const sends = queue.map((payload) => {
+            const myQSeq = (questionAttemptSeq[payload.question_id] =
+                (questionAttemptSeq[payload.question_id] || 0) + 1);
 
             return postAnswerWithRetry(payload)
                 .then(() => {
-                    if (questionAttemptSeq[payload.question_id] !== myQSeq) return;
+                    if (questionAttemptSeq[payload.question_id] !== myQSeq)
+                        return;
 
                     dequeueAnswer(payload.question_id);
                     updateConnectionIndicator();
                 })
-                .catch(err => {
-                    if (questionAttemptSeq[payload.question_id] !== myQSeq) return;
+                .catch((err) => {
+                    if (questionAttemptSeq[payload.question_id] !== myQSeq)
+                        return;
 
                     // A 409 will never succeed by retrying later - drop it so the
                     // queue does not retry forever against a closed attempt.
@@ -246,7 +272,7 @@ export function createAutosave({ url, queueKey, csrf, clock, doc = document }) {
                         return;
                     }
 
-                    updateConnectionIndicator('offline');
+                    updateConnectionIndicator("offline");
                 });
         });
 
@@ -265,21 +291,24 @@ export function createAutosave({ url, queueKey, csrf, clock, doc = document }) {
     function finalizeAllAnswers() {
         const grouped = new Map();
 
-        doc.querySelectorAll('.question-input:not(.file-input)').forEach(input => {
-            const qid = input.dataset.question;
-            if (!grouped.has(qid)) grouped.set(qid, []);
-            grouped.get(qid).push(input);
-        });
+        doc.querySelectorAll(".question-input:not(.file-input)").forEach(
+            (input) => {
+                const qid = input.dataset.question;
+                if (!grouped.has(qid)) grouped.set(qid, []);
+                grouped.get(qid).push(input);
+            },
+        );
 
         if (grouped.size === 0) {
             return Promise.resolve();
         }
 
-        updateConnectionIndicator('retrying');
+        updateConnectionIndicator("retrying");
 
         const sends = Array.from(grouped, ([questionId, inputs]) => {
             const payload = answerPayloadFromInputs(questionId, inputs);
-            const myQSeq = questionAttemptSeq[questionId] = (questionAttemptSeq[questionId] || 0) + 1;
+            const myQSeq = (questionAttemptSeq[questionId] =
+                (questionAttemptSeq[questionId] || 0) + 1);
 
             return postAnswerWithFastRetry(payload)
                 .then(() => {
@@ -295,7 +324,9 @@ export function createAutosave({ url, queueKey, csrf, clock, doc = document }) {
                 });
         });
 
-        return Promise.allSettled(sends).then(() => updateConnectionIndicator());
+        return Promise.allSettled(sends).then(() =>
+            updateConnectionIndicator(),
+        );
     }
 
     return {

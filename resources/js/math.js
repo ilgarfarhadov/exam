@@ -1,14 +1,5 @@
-/*!
- * Peerstack Exam System
- *
- * @author    Damir Pashayev <pashayevdamir@gmail.com>
- * @copyright 2026 Damir Pashayev. All rights reserved.
- * @license   Proprietary. All rights reserved.
- * @link      https://github.com/pasayevdemir
- */
-
-import katex from 'katex';
-import 'katex/dist/katex.min.css';
+import katex from "katex";
+import "katex/dist/katex.min.css";
 
 /**
  * Typeset the `$...$` spans the markdown renderer left behind.
@@ -22,11 +13,11 @@ import 'katex/dist/katex.min.css';
  * still answer everything else.
  */
 export function renderMath(root = document) {
-    root.querySelectorAll('.ps-math:not(.ps-math-done)').forEach(el => {
+    root.querySelectorAll(".ps-math:not(.ps-math-done)").forEach((el) => {
         katex.render(el.textContent, el, {
-            displayMode: el.dataset.display === '1',
+            displayMode: el.dataset.display === "1",
             throwOnError: false,
         });
-        el.classList.add('ps-math-done');
+        el.classList.add("ps-math-done");
     });
 }

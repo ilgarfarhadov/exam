@@ -1,12 +1,3 @@
-/*!
- * Peerstack Exam System
- *
- * @author    Damir Pashayev <pashayevdamir@gmail.com>
- * @copyright 2026 Damir Pashayev. All rights reserved.
- * @license   Proprietary. All rights reserved.
- * @link      https://github.com/pasayevdemir
- */
-
 /** How long the badge stays in its "copied" state before going back. */
 const FEEDBACK_MS = 1200;
 
@@ -18,29 +9,30 @@ const FEEDBACK_MS = 1200;
  * tell whether the copy worked before closing the page.
  */
 export function start(doc = document) {
-    doc.querySelectorAll('.copy-password').forEach(badge => {
-        badge.addEventListener('click', () => {
-            const icon = badge.querySelector('i');
+    doc.querySelectorAll(".copy-password").forEach((badge) => {
+        badge.addEventListener("click", () => {
+            const icon = badge.querySelector("i");
             if (!icon || !navigator.clipboard) return;
 
             const restore = () => {
-                badge.classList.remove('bg-success', 'text-white');
-                badge.classList.add('bg-light', 'text-dark');
-                icon.classList.remove('fa-check', 'fa-times');
-                icon.classList.add('fa-copy');
+                badge.classList.remove("bg-success", "text-white");
+                badge.classList.add("bg-light", "text-dark");
+                icon.classList.remove("fa-check", "fa-times");
+                icon.classList.add("fa-copy");
             };
 
-            navigator.clipboard.writeText(badge.dataset.password)
+            navigator.clipboard
+                .writeText(badge.dataset.password)
                 .then(() => {
-                    badge.classList.remove('bg-light', 'text-dark');
-                    badge.classList.add('bg-success', 'text-white');
-                    icon.classList.remove('fa-copy');
-                    icon.classList.add('fa-check');
+                    badge.classList.remove("bg-light", "text-dark");
+                    badge.classList.add("bg-success", "text-white");
+                    icon.classList.remove("fa-copy");
+                    icon.classList.add("fa-check");
                     setTimeout(restore, FEEDBACK_MS);
                 })
                 .catch(() => {
-                    icon.classList.remove('fa-copy');
-                    icon.classList.add('fa-times');
+                    icon.classList.remove("fa-copy");
+                    icon.classList.add("fa-times");
                     setTimeout(restore, FEEDBACK_MS);
                 });
         });

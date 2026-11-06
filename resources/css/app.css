@@ -1,12 +1,3 @@
-/*!
- * Peerstack Exam System
- *
- * @author    Damir Pashayev <pashayevdamir@gmail.com>
- * @copyright 2026 Damir Pashayev. All rights reserved.
- * @license   Proprietary. All rights reserved.
- * @link      https://github.com/pasayevdemir
- */
-
 /*
  * Tailwind is deliberately NOT imported here.
  *
@@ -30,58 +21,62 @@
 
 :root {
     /* Brand palette */
-    --ps-navy:        #1E2235;
-    --ps-navy-light:  #2A304A;
-    --ps-green:       #1DB584;
-    --ps-green-dark:  #17956c;
+    --ps-navy: #1e2235;
+    --ps-navy-light: #2a304a;
+    --ps-green: #1db584;
+    --ps-green-dark: #17956c;
     --ps-green-alpha: rgba(29, 181, 132, 0.12);
 
     /* Neutrals */
-    --ps-bg:          #F4F6FA;
-    --ps-surface:     #FFFFFF;
-    --ps-border:      #E3E8F0;
-    --ps-text:        #1E2235;
-    --ps-muted:       #6B7590;
+    --ps-bg: #f4f6fa;
+    --ps-surface: #ffffff;
+    --ps-border: #e3e8f0;
+    --ps-text: #1e2235;
+    --ps-muted: #6b7590;
 
     /* Semantic */
-    --ps-success:     #1DB584;
-    --ps-danger:      #E85757;
-    --ps-warning:     #F5A623;
-    --ps-info:        #4A90D9;
+    --ps-success: #1db584;
+    --ps-danger: #e85757;
+    --ps-warning: #f5a623;
+    --ps-info: #4a90d9;
 
     /* Shadows */
-    --ps-shadow-sm:   0 1px 3px rgba(30,34,53,0.08);
-    --ps-shadow-md:   0 4px 16px rgba(30,34,53,0.12);
-    --ps-shadow-lg:   0 8px 32px rgba(30,34,53,0.16);
+    --ps-shadow-sm: 0 1px 3px rgba(30, 34, 53, 0.08);
+    --ps-shadow-md: 0 4px 16px rgba(30, 34, 53, 0.12);
+    --ps-shadow-lg: 0 8px 32px rgba(30, 34, 53, 0.16);
 
     /* Radii */
-    --ps-radius-sm:   6px;
-    --ps-radius-md:   10px;
-    --ps-radius-lg:   14px;
+    --ps-radius-sm: 6px;
+    --ps-radius-md: 10px;
+    --ps-radius-lg: 14px;
 
     /* Transitions */
-    --ps-transition:  all 0.18s ease;
+    --ps-transition: all 0.18s ease;
 
     /* Bootstrap overrides via CSS vars */
-    --primary-color:  #1DB584;
-    --primary-light:  #7ddfc3;
-    --success-color:  #1DB584;
-    --danger-color:   #E85757;
-    --warning-color:  #F5A623;
-    --light-bg:       #F4F6FA;
-    --border-color:   #E3E8F0;
-    --shadow-sm:      var(--ps-shadow-sm);
-    --shadow-md:      var(--ps-shadow-md);
-    --transition-fast:   var(--ps-transition);
+    --primary-color: #1db584;
+    --primary-light: #7ddfc3;
+    --success-color: #1db584;
+    --danger-color: #e85757;
+    --warning-color: #f5a623;
+    --light-bg: #f4f6fa;
+    --border-color: #e3e8f0;
+    --shadow-sm: var(--ps-shadow-sm);
+    --shadow-md: var(--ps-shadow-md);
+    --transition-fast: var(--ps-transition);
     --transition-normal: all 0.25s ease;
-    --border-radius-sm:  var(--ps-radius-sm);
-    --border-radius-md:  var(--ps-radius-md);
-    --border-radius-lg:  var(--ps-radius-lg);
+    --border-radius-sm: var(--ps-radius-sm);
+    --border-radius-md: var(--ps-radius-md);
+    --border-radius-lg: var(--ps-radius-lg);
 }
 
 /* ── Global ── */
 
-*, *::before, *::after { box-sizing: border-box; }
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 body {
     background-color: var(--ps-bg);
@@ -126,7 +121,7 @@ body {
 }
 
 .navbar .nav-link {
-    color: rgba(255,255,255,0.78) !important;
+    color: rgba(255, 255, 255, 0.78) !important;
     font-size: 0.875rem;
     font-weight: 500;
     transition: color 0.15s ease;
@@ -137,7 +132,7 @@ body {
 }
 
 .navbar .btn-link {
-    color: rgba(255,255,255,0.78) !important;
+    color: rgba(255, 255, 255, 0.78) !important;
     font-size: 0.875rem;
     font-weight: 500;
     text-decoration: none !important;
@@ -316,20 +311,20 @@ body {
 .status-badge.bg-success {
     background-color: var(--ps-green-alpha) !important;
     color: var(--ps-green-dark) !important;
-    border: 1px solid rgba(29,181,132,0.25);
+    border: 1px solid rgba(29, 181, 132, 0.25);
 }
 
 .badge.bg-secondary,
 .status-badge.bg-secondary {
-    background-color: rgba(107,117,144,0.12) !important;
+    background-color: rgba(107, 117, 144, 0.12) !important;
     color: var(--ps-muted) !important;
-    border: 1px solid rgba(107,117,144,0.2);
+    border: 1px solid rgba(107, 117, 144, 0.2);
 }
 
 .badge.bg-danger {
-    background-color: rgba(232,87,87,0.12) !important;
+    background-color: rgba(232, 87, 87, 0.12) !important;
     color: #c0392b !important;
-    border: 1px solid rgba(232,87,87,0.2);
+    border: 1px solid rgba(232, 87, 87, 0.2);
 }
 
 /* The third of the three states, and the reason the set is written out here at
@@ -337,9 +332,9 @@ body {
    next to these two pale pills in a different visual family entirely. */
 .badge.bg-warning,
 .status-badge.bg-warning {
-    background-color: rgba(245,166,35,0.14) !important;
+    background-color: rgba(245, 166, 35, 0.14) !important;
     color: #9a6200 !important;
-    border: 1px solid rgba(245,166,35,0.28);
+    border: 1px solid rgba(245, 166, 35, 0.28);
 }
 
 /* ── Alerts ── */
@@ -352,17 +347,17 @@ body {
 }
 
 .alert-success {
-    background-color: rgba(29,181,132,0.1) !important;
+    background-color: rgba(29, 181, 132, 0.1) !important;
     color: var(--ps-green-dark) !important;
 }
 
 .alert-danger {
-    background-color: rgba(232,87,87,0.1) !important;
+    background-color: rgba(232, 87, 87, 0.1) !important;
     color: #c0392b !important;
 }
 
 .alert-warning {
-    background-color: rgba(245,166,35,0.1) !important;
+    background-color: rgba(245, 166, 35, 0.1) !important;
     color: #b7791f !important;
 }
 
@@ -383,7 +378,9 @@ body {
     font-size: 0.875rem;
     color: var(--ps-text);
     background-color: var(--ps-surface) !important;
-    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
     padding: 0.5rem 0.75rem;
 }
 
@@ -430,7 +427,9 @@ h1.h3 {
 /* ── Exam Cards ── */
 
 .exam-card {
-    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
 }
 
 .exam-card:hover {
@@ -462,25 +461,45 @@ h1.h3 {
 
 /* ── Utility ── */
 
-.file-upload-settings { display: none; }
-.file-upload-settings.show { display: block !important; }
-.mcq-answers-container.hide { display: none !important; }
+.file-upload-settings {
+    display: none;
+}
+.file-upload-settings.show {
+    display: block !important;
+}
+.mcq-answers-container.hide {
+    display: none !important;
+}
 
 .questions-container {
     max-height: 500px;
     overflow-y: auto;
 }
 
-.large-icon { font-size: 3rem; }
-.inline-form { display: inline; }
-.smooth-transition { transition: border-color 0.3s ease, box-shadow 0.3s ease; }
-.btn-custom { border-radius: var(--ps-radius-sm) !important; }
+.large-icon {
+    font-size: 3rem;
+}
+.inline-form {
+    display: inline;
+}
+.smooth-transition {
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+.btn-custom {
+    border-radius: var(--ps-radius-sm) !important;
+}
 
 /* ── Admin Login (standalone page) ── */
 
 .login-container {
     min-height: 100vh;
-    background: linear-gradient(145deg, var(--ps-navy) 0%, var(--ps-navy-light) 100%);
+    background: linear-gradient(
+        145deg,
+        var(--ps-navy) 0%,
+        var(--ps-navy-light) 100%
+    );
     display: flex;
     align-items: center;
     justify-content: center;
@@ -606,8 +625,13 @@ h1.h3 {
 }
 
 @keyframes timerPulse {
-    0%, 100% { opacity: 1; }
-    50%       { opacity: 0.75; }
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.75;
+    }
 }
 
 /* The question map scrolls cards to the top of the viewport, where the sticky
@@ -657,7 +681,7 @@ h1.h3 {
     border-radius: var(--ps-radius-sm);
     background: var(--ps-surface);
     color: var(--ps-muted);
-    font-size: .65rem;
+    font-size: 0.65rem;
     font-weight: 600;
     transition: var(--ps-transition);
 }
@@ -736,12 +760,24 @@ h1.h3 {
     color: #fff;
 }
 
-.ps-bank-1 { background-color: #4A90D9; }
-.ps-bank-2 { background-color: #8E6FD8; }
-.ps-bank-3 { background-color: #D9744A; }
-.ps-bank-4 { background-color: #1DB584; }
-.ps-bank-5 { background-color: #C64B8C; }
-.ps-bank-6 { background-color: #4AA8A0; }
+.ps-bank-1 {
+    background-color: #4a90d9;
+}
+.ps-bank-2 {
+    background-color: #8e6fd8;
+}
+.ps-bank-3 {
+    background-color: #d9744a;
+}
+.ps-bank-4 {
+    background-color: #1db584;
+}
+.ps-bank-5 {
+    background-color: #c64b8c;
+}
+.ps-bank-6 {
+    background-color: #4aa8a0;
+}
 
 @media (max-width: 991.98px) {
     .ps-question-map {
@@ -777,7 +813,9 @@ h1.h3 {
 
 /* ── Pagination ── */
 
-.pagination { margin-bottom: 0; }
+.pagination {
+    margin-bottom: 0;
+}
 
 .page-link {
     color: var(--ps-green);
@@ -801,7 +839,11 @@ h1.h3 {
 /* ── Welcome/hero ── */
 
 .welcome-hero {
-    background: linear-gradient(145deg, var(--ps-navy) 0%, var(--ps-navy-light) 100%);
+    background: linear-gradient(
+        145deg,
+        var(--ps-navy) 0%,
+        var(--ps-navy-light) 100%
+    );
     color: white;
     padding: 100px 0;
 }
@@ -830,12 +872,20 @@ h1.h3 {
 
 /* ── Misc result helpers ── */
 
-.bg-light-success { background-color: rgba(29,181,132,0.08) !important; }
-.bg-light-danger  { background-color: rgba(232,87,87,0.08)  !important; }
+.bg-light-success {
+    background-color: rgba(29, 181, 132, 0.08) !important;
+}
+.bg-light-danger {
+    background-color: rgba(232, 87, 87, 0.08) !important;
+}
 
-.score-display .badge { font-size: 0.9rem; }
+.score-display .badge {
+    font-size: 0.9rem;
+}
 
-.answer-option { transition: var(--ps-transition); }
+.answer-option {
+    transition: var(--ps-transition);
+}
 
 .file-submission .card {
     border: 2px dashed var(--ps-border) !important;
@@ -901,8 +951,14 @@ h1.h3 {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(12px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ── Responsive ── */
@@ -937,9 +993,15 @@ h1.h3 {
     color: var(--ps-text);
 }
 
-.ps-markdown h1 { font-size: 1.2em; }
-.ps-markdown h2 { font-size: 1.12em; }
-.ps-markdown h3 { font-size: 1.05em; }
+.ps-markdown h1 {
+    font-size: 1.2em;
+}
+.ps-markdown h2 {
+    font-size: 1.12em;
+}
+.ps-markdown h3 {
+    font-size: 1.05em;
+}
 
 .ps-markdown h4,
 .ps-markdown h5,
@@ -986,7 +1048,8 @@ h1.h3 {
    wide and costs a code sample two extra wrapped lines. */
 .ps-markdown code,
 .ps-markdown pre {
-    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    font-family:
+        ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
         "Liberation Mono", monospace;
     /* The question title is set in 500; code must not inherit that. */
     font-weight: 400;
@@ -1140,9 +1203,13 @@ h1.h3 {
    a row could show an amber number above a green bar and nothing in the markup
    looked wrong. */
 
-.ps-bank-row + .ps-bank-row { margin-top: 1rem; }
+.ps-bank-row + .ps-bank-row {
+    margin-top: 1rem;
+}
 
-.ps-bank-row .progress { height: 10px; }
+.ps-bank-row .progress {
+    height: 10px;
+}
 
 .ps-bank-name {
     font-size: 0.875rem;
@@ -1167,15 +1234,27 @@ h1.h3 {
     font-variant-numeric: tabular-nums;
 }
 
-.ps-pct--good { color: var(--ps-green-dark); }
-.ps-pct--mid  { color: #9a6200; }
-.ps-pct--weak { color: #c0392b; }
+.ps-pct--good {
+    color: var(--ps-green-dark);
+}
+.ps-pct--mid {
+    color: #9a6200;
+}
+.ps-pct--weak {
+    color: #c0392b;
+}
 
 /* Specificity 0,2,0, deliberately above the bare .progress-bar default, so the
    colour holds no matter where the bundler emits these relative to it. */
-.progress-bar.ps-bank-bar--good { background-color: var(--ps-green); }
-.progress-bar.ps-bank-bar--mid  { background-color: var(--ps-warning); }
-.progress-bar.ps-bank-bar--weak { background-color: var(--ps-danger); }
+.progress-bar.ps-bank-bar--good {
+    background-color: var(--ps-green);
+}
+.progress-bar.ps-bank-bar--mid {
+    background-color: var(--ps-warning);
+}
+.progress-bar.ps-bank-bar--weak {
+    background-color: var(--ps-danger);
+}
 
 /* Time-on-sitting bar under the submission date in the results table. Reuses the
    bank-breakdown bar (.progress + .ps-bank-bar--*) so the two read as one system;
@@ -1185,7 +1264,6 @@ h1.h3 {
     max-width: 120px;
     margin-top: 4px;
 }
-
 
 /* ── Math (KaTeX) ── */
 
@@ -1204,7 +1282,9 @@ h1.h3 {
 }
 
 @media (max-width: 768px) {
-    .questions-container { max-height: 400px; }
+    .questions-container {
+        max-height: 400px;
+    }
 
     .login-card {
         margin: 1rem;

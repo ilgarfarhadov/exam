@@ -1,10 +1,4 @@
-{{--
-    Peerstack Exam System
 
-    Author    : Damir Pashayev <pashayevdamir@gmail.com>
-    Copyright : 2026 Damir Pashayev. All rights reserved.
-    Link      : https://github.com/pasayevdemir
---}}
 @extends('layouts.app')
 
 @section('title', 'Edit Exam - ' . $exam->exam_name)
@@ -141,10 +135,10 @@
                                         <strong>Questions per attempt:</strong> {{ $exam->quota_total }}
                                     </p>
                                     <p class="card-text mb-1">
-                                        <strong>Created:</strong> {{ $exam->created_at->format('M d, Y H:i') }}
+                                        <strong>Created:</strong> {{ $exam->created_at?->timezone('Asia/Baku')->format('M d, Y H:i') }}
                                     </p>
                                     <p class="card-text mb-0">
-                                        <strong>Last Updated:</strong> {{ $exam->updated_at->format('M d, Y H:i') }}
+                                        <strong>Last Updated:</strong> {{ $exam->updated_at?->timezone('Asia/Baku')->format('M d, Y H:i') }}
                                     </p>
                                 </div>
                             </div>

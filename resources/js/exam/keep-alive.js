@@ -1,12 +1,3 @@
-/*!
- * Peerstack Exam System
- *
- * @author    Damir Pashayev <pashayevdamir@gmail.com>
- * @copyright 2026 Damir Pashayev. All rights reserved.
- * @license   Proprietary. All rights reserved.
- * @link      https://github.com/pasayevdemir
- */
-
 /**
  * Keeps the session alive while the student is reading rather than answering.
  *
@@ -16,22 +7,28 @@
 const KEEP_ALIVE_MIN_GAP_MS = 10000;
 const KEEP_ALIVE_INTERVAL_MS = 300000;
 
-export function createKeepAlive({ url, csrf, clock, doc = document, win = window }) {
+export function createKeepAlive({
+    url,
+    csrf,
+    clock,
+    doc = document,
+    win = window,
+}) {
     let lastKeepAliveAt = 0;
 
     function showExamClosedBanner() {
-        if (doc.getElementById('examClosedBanner')) return;
+        if (doc.getElementById("examClosedBanner")) return;
 
-        const banner = doc.createElement('div');
-        banner.id = 'examClosedBanner';
-        banner.className = 'alert alert-warning';
-        banner.setAttribute('role', 'alert');
+        const banner = doc.createElement("div");
+        banner.id = "examClosedBanner";
+        banner.className = "alert alert-warning";
+        banner.setAttribute("role", "alert");
         banner.innerHTML =
-            '<i class="fas fa-triangle-exclamation me-2"></i>'
-            + '<strong>Bu imtahan administrator tərəfindən dayandırıldı.</strong> '
-            + 'Cavablarınız saxlanılır — işinizi bitirib təqdim edə bilərsiniz.';
+            '<i class="fas fa-triangle-exclamation me-2"></i>' +
+            "<strong>Bu imtahan administrator tərəfindən dayandırıldı.</strong> " +
+            "Cavablarınız saxlanılır — işinizi bitirib təqdim edə bilərsiniz.";
 
-        doc.querySelector('.container, main, body').prepend(banner);
+        doc.querySelector(".container, main, body").prepend(banner);
     }
 
     function ping() {
@@ -46,9 +43,9 @@ export function createKeepAlive({ url, csrf, clock, doc = document, win = window
 
         lastKeepAliveAt = now;
 
-        return fetch(url, { headers: { Accept: 'application/json' } })
-            .then(response => (response.ok ? response.json() : null))
-            .then(data => {
+        return fetch(url, { headers: { Accept: "application/json" } })
+            .then((response) => (response.ok ? response.json() : null))
+            .then((data) => {
                 if (!data) return;
 
                 clock.report(data.remaining_seconds);
@@ -73,8 +70,8 @@ export function createKeepAlive({ url, csrf, clock, doc = document, win = window
         // The two moments the local countdown is most likely to have fallen
         // behind the server: the tab was in the background (interval throttled
         // or the machine suspended), or the connection dropped and came back.
-        win.addEventListener('online', ping);
-        doc.addEventListener('visibilitychange', function () {
+        win.addEventListener("online", ping);
+        doc.addEventListener("visibilitychange", function () {
             if (!doc.hidden) {
                 ping();
             }

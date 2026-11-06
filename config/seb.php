@@ -1,13 +1,6 @@
 <?php
 
-/**
- * Peerstack Exam System
- *
- * @author    Damir Pashayev <pashayevdamir@gmail.com>
- * @copyright 2026 Damir Pashayev. All rights reserved.
- *
- * @link      https://github.com/pasayevdemir
- */
+
 
 return [
     // Set once per SEB Configuration Tool export (Faza 3.1) - this key is

@@ -1,12 +1,3 @@
-/*!
- * Peerstack Exam System
- *
- * @author    Damir Pashayev <pashayevdamir@gmail.com>
- * @copyright 2026 Damir Pashayev. All rights reserved.
- * @license   Proprietary. All rights reserved.
- * @link      https://github.com/pasayevdemir
- */
-
 /**
  * The single / multiple / file-upload switch on the question form.
  *
@@ -21,35 +12,35 @@
  * wiped the marks that were being restored after a rejected submission.
  */
 export function initQuestionTypeToggle(doc = document) {
-    const single = doc.getElementById('single');
-    const multiple = doc.getElementById('multiple');
-    const fileUpload = doc.getElementById('file_upload');
-    const mcqContainer = doc.getElementById('mcqAnswersContainer');
-    const fileSettings = doc.getElementById('fileUploadSettings');
+    const single = doc.getElementById("single");
+    const multiple = doc.getElementById("multiple");
+    const fileUpload = doc.getElementById("file_upload");
+    const mcqContainer = doc.getElementById("mcqAnswersContainer");
+    const fileSettings = doc.getElementById("fileUploadSettings");
 
     if (!single || !multiple || !fileUpload || !mcqContainer || !fileSettings) {
         return;
     }
 
     function setAnswersRequired(required) {
-        doc.querySelectorAll('#answersContainer input').forEach(input => {
+        doc.querySelectorAll("#answersContainer input").forEach((input) => {
             if (required) {
-                input.setAttribute('required', 'required');
+                input.setAttribute("required", "required");
             } else {
-                input.removeAttribute('required');
+                input.removeAttribute("required");
             }
         });
     }
 
     function updateHelpText() {
-        doc.getElementById('correct-answers-help')?.remove();
+        doc.getElementById("correct-answers-help")?.remove();
 
-        const help = doc.createElement('small');
-        help.id = 'correct-answers-help';
-        help.className = 'text-muted';
+        const help = doc.createElement("small");
+        help.id = "correct-answers-help";
+        help.className = "text-muted";
         help.textContent = single.checked
-            ? 'Select ONE correct answer'
-            : 'Select ALL correct answers (you can select multiple options)';
+            ? "Select ONE correct answer"
+            : "Select ALL correct answers (you can select multiple options)";
 
         mcqContainer.appendChild(help);
     }
@@ -60,9 +51,9 @@ export function initQuestionTypeToggle(doc = document) {
      * server reads positions out of correct_answers[] regardless.
      */
     function updateCheckboxBehavior(clearSelections) {
-        doc.querySelectorAll('.correct-answer').forEach(input => {
-            input.type = single.checked ? 'radio' : 'checkbox';
-            input.name = 'correct_answers[]';
+        doc.querySelectorAll(".correct-answer").forEach((input) => {
+            input.type = single.checked ? "radio" : "checkbox";
+            input.name = "correct_answers[]";
 
             // Two marks carried into single choice would be rejected by the
             // server, so the form does not let the admin get there.
@@ -77,17 +68,17 @@ export function initQuestionTypeToggle(doc = document) {
     function updateQuestionTypeDisplay(clearSelections) {
         const isFileUpload = fileUpload.checked;
 
-        mcqContainer.style.display = isFileUpload ? 'none' : 'block';
-        fileSettings.style.display = isFileUpload ? 'block' : 'none';
-        setAnswersRequired(! isFileUpload);
+        mcqContainer.style.display = isFileUpload ? "none" : "block";
+        fileSettings.style.display = isFileUpload ? "block" : "none";
+        setAnswersRequired(!isFileUpload);
 
-        if (! isFileUpload) {
+        if (!isFileUpload) {
             updateCheckboxBehavior(clearSelections);
         }
     }
 
-    [single, multiple, fileUpload].forEach(radio => {
-        radio.addEventListener('change', () => updateQuestionTypeDisplay(true));
+    [single, multiple, fileUpload].forEach((radio) => {
+        radio.addEventListener("change", () => updateQuestionTypeDisplay(true));
     });
 
     updateQuestionTypeDisplay(false);

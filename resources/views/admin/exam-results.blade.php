@@ -1,10 +1,4 @@
-{{--
-    Peerstack Exam System
 
-    Author    : Damir Pashayev <pashayevdamir@gmail.com>
-    Copyright : 2026 Damir Pashayev. All rights reserved.
-    Link      : https://github.com/pasayevdemir
---}}
 @extends('layouts.app')
 
 @section('page', 'exam-results')
@@ -147,7 +141,7 @@
                                     @endif
                                 </td>
                                 <td>
-                                    <div>{{ $result->submitted_at->format('M d, Y H:i') }}</div>
+                                    <div>{{ $result->submitted_at?->timezone('Asia/Baku')->format('M d, Y H:i') }}</div>
                                     @php $durationMinutes = $result->examAttempt?->durationMinutes(); @endphp
                                     @if ($durationMinutes === null)
                                         {{-- Attempt cleared by an admin, or a legacy row without one. --}}
@@ -242,7 +236,7 @@
                                 </span>
                             </div>
                             <div class="col-md-6">
-                                <strong>Submitted:</strong> {{ $result->submitted_at->format('M d, Y H:i') }}
+                                <strong>Submitted:</strong> {{ $result->submitted_at?->timezone('Asia/Baku')->format('M d, Y H:i') }}
                             </div>
                         </div>
 
@@ -258,7 +252,7 @@
                                             <i class="fas fa-exclamation-triangle text-warning me-2"></i>
                                             {{ str_replace('_', ' ', ucfirst($event->type)) }}
                                         </span>
-                                        <span class="text-muted small">{{ $event->occurred_at->format('H:i:s') }}</span>
+                                        <span class="text-muted small">{{ $event->occurred_at?->timezone('Asia/Baku')->format('H:i:s') }}</span>
                                     </li>
                                 @endforeach
                             </ul>

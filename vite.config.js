@@ -1,14 +1,5 @@
-/*!
- * Peerstack Exam System
- *
- * @author    Damir Pashayev <pashayevdamir@gmail.com>
- * @copyright 2026 Damir Pashayev. All rights reserved.
- * @license   Proprietary. All rights reserved.
- * @link      https://github.com/pasayevdemir
- */
-
-import { defineConfig } from 'vite';
-import laravel from 'laravel-vite-plugin';
+import { defineConfig } from "vite";
+import laravel from "laravel-vite-plugin";
 
 // Stamped onto every compiled bundle. The per-file headers in resources/js are
 // lost the moment the bundle is minified, and a deployed server ships only the
@@ -37,17 +28,18 @@ const banner = `/*!
 // stylesheet outright would be false, so the notice claims only what is
 // actually held — the compilation — and says so.
 const stampCss = () => ({
-    name: 'peerstack-css-attribution',
+    name: "peerstack-css-attribution",
     generateBundle(_options, bundle) {
         const notice =
-            '/*! Part of the Peerstack Exam System. Compilation copyright (c) 2026 ' +
-            'Damir Pashayev <pashayevdamir@gmail.com>, https://github.com/pasayevdemir — ' +
-            'all rights reserved. Third-party components remain the property of their ' +
-            'respective authors; their notices are preserved below. */\n';
+            "/*! Part of the Peerstack Exam System. Compilation copyright (c) 2026 " +
+            "Damir Pashayev <pashayevdamir@gmail.com>, https://github.com/pasayevdemir — " +
+            "all rights reserved. Third-party components remain the property of their " +
+            "respective authors; their notices are preserved below. */\n";
 
         for (const asset of Object.values(bundle)) {
-            if (asset.type !== 'asset' || !asset.fileName.endsWith('.css')) continue;
-            if (String(asset.source).includes('Pashayev')) continue;
+            if (asset.type !== "asset" || !asset.fileName.endsWith(".css"))
+                continue;
+            if (String(asset.source).includes("Pashayev")) continue;
             asset.source = notice + asset.source;
         }
     },
@@ -56,7 +48,7 @@ const stampCss = () => ({
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['resources/css/app.css', 'resources/js/app.js'],
+            input: ["resources/css/app.css", "resources/js/app.js"],
             refresh: true,
         }),
         stampCss(),
@@ -71,6 +63,6 @@ export default defineConfig({
     // Keep `/*! */` comments rather than stripping every comment, so the banner
     // above and the per-file headers survive into the minified output.
     esbuild: {
-        legalComments: 'inline',
+        legalComments: "inline",
     },
 });

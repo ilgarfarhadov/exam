@@ -1,10 +1,4 @@
-{{--
-    Peerstack Exam System
 
-    Author    : Damir Pashayev <pashayevdamir@gmail.com>
-    Copyright : 2026 Damir Pashayev. All rights reserved.
-    Link      : https://github.com/pasayevdemir
---}}
 @extends('layouts.app')
 
 @section('title', 'Students')
@@ -75,7 +69,7 @@
                         <tr>
                             <td>{{ $resetRequest->user->name }}</td>
                             <td>{{ $resetRequest->user->email }}</td>
-                            <td>{{ $resetRequest->created_at->format('d M Y H:i') }}</td>
+                            <td>{{ $resetRequest->created_at?->timezone('Asia/Baku')->format('d M Y H:i') }}</td>
                             <td class="text-end">
                                 <div class="d-inline-flex gap-2 flex-wrap justify-content-end">
                                     <form action="{{ route('admin.approve-reset-request', $resetRequest->id) }}" method="POST"

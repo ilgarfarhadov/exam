@@ -1,10 +1,4 @@
-{{--
-    Peerstack Exam System
 
-    Author    : Damir Pashayev <pashayevdamir@gmail.com>
-    Copyright : 2026 Damir Pashayev. All rights reserved.
-    Link      : https://github.com/pasayevdemir
---}}
 @extends('layouts.app')
 
 @section('page', 'grade-submissions')
@@ -79,7 +73,7 @@
                                 {{ $submission->user?->name ?? 'N/A' }} ({{ $submission->user?->fin_code ?? 'N/A' }})
                             </h6>
                             <small class="text-muted">
-                                Submitted: {{ $submission->submitted_at->format('M d, Y H:i:s') }}
+                                Submitted: {{ $submission->submitted_at?->timezone('Asia/Baku')->format('M d, Y H:i:s') }}
                             </small>
                         </div>
                         <div class="text-end">

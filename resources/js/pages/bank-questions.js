@@ -1,13 +1,4 @@
-/*!
- * Peerstack Exam System
- *
- * @author    Damir Pashayev <pashayevdamir@gmail.com>
- * @copyright 2026 Damir Pashayev. All rights reserved.
- * @license   Proprietary. All rights reserved.
- * @link      https://github.com/pasayevdemir
- */
-
-import { initQuestionTypeToggle } from '../shared/question-type.js';
+import { initQuestionTypeToggle } from "../shared/question-type.js";
 
 /**
  * At least this many options, whatever the admin has filled in so far.
@@ -16,8 +7,8 @@ import { initQuestionTypeToggle } from '../shared/question-type.js';
 const MINIMUM_OPTIONS = 2;
 
 function filledOptions(doc) {
-    return Array.from(doc.querySelectorAll('.answer-text-input')).filter(
-        input => input.value.trim() !== ''
+    return Array.from(doc.querySelectorAll(".answer-text-input")).filter(
+        (input) => input.value.trim() !== "",
     );
 }
 
@@ -29,23 +20,23 @@ function filledOptions(doc) {
  * started filling in.
  */
 function initAnswerRequirements(doc) {
-    const inputs = doc.querySelectorAll('.answer-text-input');
+    const inputs = doc.querySelectorAll(".answer-text-input");
 
     function update() {
         const filled = filledOptions(doc).length;
 
         inputs.forEach((input, index) => {
             if (index < Math.max(MINIMUM_OPTIONS, filled)) {
-                input.setAttribute('required', 'required');
-            } else if (input.value.trim() === '') {
-                input.removeAttribute('required');
+                input.setAttribute("required", "required");
+            } else if (input.value.trim() === "") {
+                input.removeAttribute("required");
             }
         });
     }
 
-    inputs.forEach(input => {
-        input.addEventListener('input', update);
-        input.addEventListener('blur', update);
+    inputs.forEach((input) => {
+        input.addEventListener("input", update);
+        input.addEventListener("blur", update);
     });
 }
 
@@ -56,25 +47,27 @@ function initAnswerRequirements(doc) {
  * hears about it without a round trip, not because it is the guard.
  */
 function initSubmitGuard(doc) {
-    const form = doc.querySelector('form');
-    const fileUpload = doc.getElementById('file_upload');
+    const form = doc.querySelector("form");
+    const fileUpload = doc.getElementById("file_upload");
 
     if (!form || !fileUpload) {
         return;
     }
 
-    form.addEventListener('submit', event => {
+    form.addEventListener("submit", (event) => {
         if (fileUpload.checked) {
             return;
         }
 
-        const inputs = doc.querySelectorAll('.answer-text-input');
+        const inputs = doc.querySelectorAll(".answer-text-input");
         const filled = filledOptions(doc);
-        const marked = Array.from(doc.querySelectorAll('.correct-answer:checked'));
+        const marked = Array.from(
+            doc.querySelectorAll(".correct-answer:checked"),
+        );
 
         if (filled.length < MINIMUM_OPTIONS) {
             event.preventDefault();
-            alert('Please provide at least 2 answer options.');
+            alert("Please provide at least 2 answer options.");
 
             return;
         }
@@ -82,15 +75,17 @@ function initSubmitGuard(doc) {
         // A mark on a box left blank points at nothing once the blanks are
         // dropped, so "something is marked" is not the same question as
         // "something that exists is marked".
-        const marksOnFilledOptions = marked.filter(checkbox => {
+        const marksOnFilledOptions = marked.filter((checkbox) => {
             const option = inputs[parseInt(checkbox.value, 10)];
 
-            return option && option.value.trim() !== '';
+            return option && option.value.trim() !== "";
         });
 
         if (marked.length === 0 || marksOnFilledOptions.length === 0) {
             event.preventDefault();
-            alert('Please select at least one correct answer for your question.');
+            alert(
+                "Please select at least one correct answer for your question.",
+            );
 
             return;
         }
@@ -98,12 +93,14 @@ function initSubmitGuard(doc) {
         // Disabled fields are not submitted, which is how the blanks are kept
         // out of the payload without renumbering anything on the way.
         inputs.forEach((input, index) => {
-            if (input.value.trim() !== '') {
+            if (input.value.trim() !== "") {
                 return;
             }
 
             input.disabled = true;
-            const checkbox = doc.querySelector(`.correct-answer[value="${index}"]`);
+            const checkbox = doc.querySelector(
+                `.correct-answer[value="${index}"]`,
+            );
             if (checkbox) {
                 checkbox.disabled = true;
             }
@@ -112,9 +109,9 @@ function initSubmitGuard(doc) {
 }
 
 function initDeleteModal(doc) {
-    const modalEl = doc.getElementById('deleteQuestionModal');
-    const form = doc.getElementById('deleteQuestionForm');
-    const label = doc.getElementById('questionToDelete');
+    const modalEl = doc.getElementById("deleteQuestionModal");
+    const form = doc.getElementById("deleteQuestionForm");
+    const label = doc.getElementById("questionToDelete");
 
     if (!modalEl || !form || !label) {
         return;
@@ -122,10 +119,15 @@ function initDeleteModal(doc) {
 
     const modal = new window.bootstrap.Modal(modalEl);
 
-    doc.querySelectorAll('.delete-question-btn').forEach(button => {
-        button.addEventListener('click', () => {
-            const text = button.closest('.border')?.querySelector('p')?.textContent.trim() ?? '';
-            const shown = text.length > 100 ? `${text.substring(0, 100)}...` : text;
+    doc.querySelectorAll(".delete-question-btn").forEach((button) => {
+        button.addEventListener("click", () => {
+            const text =
+                button
+                    .closest(".border")
+                    ?.querySelector("p")
+                    ?.textContent.trim() ?? "";
+            const shown =
+                text.length > 100 ? `${text.substring(0, 100)}...` : text;
 
             label.textContent = `Question ${button.dataset.questionNumber}: ${shown}`;
             // data-action carries route('admin.delete-question', ...); the URL

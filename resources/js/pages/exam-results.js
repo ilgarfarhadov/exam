@@ -1,12 +1,3 @@
-/*!
- * Peerstack Exam System
- *
- * @author    Damir Pashayev <pashayevdamir@gmail.com>
- * @copyright 2026 Damir Pashayev. All rights reserved.
- * @license   Proprietary. All rights reserved.
- * @link      https://github.com/pasayevdemir
- */
-
 /**
  * The results search box.
  *
@@ -15,13 +6,13 @@
  * look someone up.
  */
 export function start(doc = document) {
-    const form = doc.getElementById('searchForm');
-    const input = doc.getElementById('search');
+    const form = doc.getElementById("searchForm");
+    const input = doc.getElementById("search");
 
     if (!form || !input) return;
 
-    input.addEventListener('keypress', event => {
-        if (event.key !== 'Enter') return;
+    input.addEventListener("keypress", (event) => {
+        if (event.key !== "Enter") return;
 
         event.preventDefault();
         form.submit();

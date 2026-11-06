@@ -1,10 +1,4 @@
-{{--
-    Peerstack Exam System
 
-    Author    : Damir Pashayev <pashayevdamir@gmail.com>
-    Copyright : 2026 Damir Pashayev. All rights reserved.
-    Link      : https://github.com/pasayevdemir
---}}
 {{--
     The live-updating half of the results page. Rendered both by the page and by
     StudentController::myResultsState(), which hashes this output — so a score

@@ -1,12 +1,3 @@
-/*!
- * Peerstack Exam System
- *
- * @author    Damir Pashayev <pashayevdamir@gmail.com>
- * @copyright 2026 Damir Pashayev. All rights reserved.
- * @license   Proprietary. All rights reserved.
- * @link      https://github.com/pasayevdemir
- */
-
 /**
  * Ask before submitting a form that says it wants asking.
  *
@@ -18,9 +9,9 @@
  * which is where it was.
  */
 export function initConfirmSubmit(doc = document) {
-    doc.querySelectorAll('form[data-confirm]').forEach(form => {
-        form.addEventListener('submit', event => {
-            if (! window.confirm(form.dataset.confirm)) {
+    doc.querySelectorAll("form[data-confirm]").forEach((form) => {
+        form.addEventListener("submit", (event) => {
+            if (!window.confirm(form.dataset.confirm)) {
                 event.preventDefault();
             }
         });

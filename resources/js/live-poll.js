@@ -1,13 +1,4 @@
-/*!
- * Peerstack Exam System
- *
- * @author    Damir Pashayev <pashayevdamir@gmail.com>
- * @copyright 2026 Damir Pashayev. All rights reserved.
- * @license   Proprietary. All rights reserved.
- * @link      https://github.com/pasayevdemir
- */
-
-import { renderMath } from './math.js';
+import { renderMath } from "./math.js";
 
 /**
  * Poll a server-rendered fragment and swap it in when it actually changes.
@@ -26,7 +17,13 @@ import { renderMath } from './math.js';
  *
  * Returns { applyPending } so a caller that blocked a swap can release it later.
  */
-export function createLivePoll({ url, version, target, intervalMs = 10000, canSwap = null }) {
+export function createLivePoll({
+    url,
+    version,
+    target,
+    intervalMs = 10000,
+    canSwap = null,
+}) {
     const MAX_BACKOFF_MS = 60000;
 
     let currentVersion = version;
@@ -59,10 +56,12 @@ export function createLivePoll({ url, version, target, intervalMs = 10000, canSw
         inFlight = true;
 
         fetch(`${url}?v=${encodeURIComponent(currentVersion)}`, {
-            headers: { 'Accept': 'application/json' },
+            headers: { Accept: "application/json" },
         })
-            .then(response => (response.ok ? response.json() : Promise.reject()))
-            .then(data => {
+            .then((response) =>
+                response.ok ? response.json() : Promise.reject(),
+            )
+            .then((data) => {
                 failures = 0;
                 if (!data || !data.changed) return;
 
@@ -88,7 +87,10 @@ export function createLivePoll({ url, version, target, intervalMs = 10000, canSw
         clearTimeout(timer);
         // Back off on a run of failures so a server that went down is not hit by
         // every open tab every 10s; one success resets it.
-        const delay = Math.min(intervalMs * Math.pow(2, failures), MAX_BACKOFF_MS);
+        const delay = Math.min(
+            intervalMs * Math.pow(2, failures),
+            MAX_BACKOFF_MS,
+        );
         timer = setTimeout(poll, delay);
     }
 
@@ -97,10 +99,10 @@ export function createLivePoll({ url, version, target, intervalMs = 10000, canSw
     // The two moments the page is most likely to be stale, mirroring the exam
     // page's keep-alive: the tab was backgrounded (ticks skipped above), or the
     // connection dropped and came back.
-    document.addEventListener('visibilitychange', function () {
+    document.addEventListener("visibilitychange", function () {
         if (!document.hidden) poll();
     });
-    window.addEventListener('online', poll);
+    window.addEventListener("online", poll);
 
     return { applyPending };
 }

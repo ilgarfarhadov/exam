@@ -1,13 +1,4 @@
-/*!
- * Peerstack Exam System
- *
- * @author    Damir Pashayev <pashayevdamir@gmail.com>
- * @copyright 2026 Damir Pashayev. All rights reserved.
- * @license   Proprietary. All rights reserved.
- * @link      https://github.com/pasayevdemir
- */
-
-const LEVELS = ['easy', 'medium', 'hard'];
+const LEVELS = ["easy", "medium", "hard"];
 
 /**
  * Show how many questions the chosen bank actually holds at each difficulty,
@@ -17,13 +8,13 @@ const LEVELS = ['easy', 'medium', 'hard'];
  * it while typing rather than when a student cannot start the exam.
  */
 export function start(doc = document) {
-    const bankSelect = doc.getElementById('question_bank_id');
+    const bankSelect = doc.getElementById("question_bank_id");
     if (!bankSelect) return;
 
     const quotaInputs = {};
     const hints = {};
 
-    LEVELS.forEach(level => {
+    LEVELS.forEach((level) => {
         quotaInputs[level] = doc.getElementById(`quota_${level}`);
         hints[level] = doc.getElementById(`${level}-count-hint`);
     });
@@ -33,7 +24,7 @@ export function start(doc = document) {
         if (!option || !option.value) return null;
 
         return LEVELS.reduce((counts, level) => {
-            counts[level] = parseInt(option.dataset[level] || '0', 10);
+            counts[level] = parseInt(option.dataset[level] || "0", 10);
 
             return counts;
         }, {});
@@ -42,17 +33,23 @@ export function start(doc = document) {
     function refresh() {
         const counts = selectedCounts();
 
-        LEVELS.forEach(level => {
-            hints[level].textContent = counts ? `(${counts[level]} available)` : '';
+        LEVELS.forEach((level) => {
+            hints[level].textContent = counts
+                ? `(${counts[level]} available)`
+                : "";
 
             const input = quotaInputs[level];
-            const exceeds = counts !== null && parseInt(input.value || '0', 10) > counts[level];
+            const exceeds =
+                counts !== null &&
+                parseInt(input.value || "0", 10) > counts[level];
 
-            input.classList.toggle('is-invalid', exceeds);
-            input.classList.toggle('border-danger', exceeds);
+            input.classList.toggle("is-invalid", exceeds);
+            input.classList.toggle("border-danger", exceeds);
         });
     }
 
-    bankSelect.addEventListener('change', refresh);
-    Object.values(quotaInputs).forEach(input => input.addEventListener('input', refresh));
+    bankSelect.addEventListener("change", refresh);
+    Object.values(quotaInputs).forEach((input) =>
+        input.addEventListener("input", refresh),
+    );
 }

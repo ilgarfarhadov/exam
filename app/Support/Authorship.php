@@ -1,13 +1,6 @@
 <?php
 
-/**
- * Peerstack Exam System
- *
- * @author    Damir Pashayev <pashayevdamir@gmail.com>
- * @copyright 2026 Damir Pashayev. All rights reserved.
- *
- * @link      https://github.com/pasayevdemir
- */
+
 
 namespace App\Support;
 
@@ -38,19 +31,19 @@ final class Authorship
     public const PROJECT = 'Peerstack Exam System';
 
     /** The sole author and copyright holder. */
-    public const AUTHOR = 'Damir Pashayev';
+    public const AUTHOR = 'Peerstack Academy Technical Team';
 
     /** The author's contact address. */
-    public const EMAIL = 'pashayevdamir@gmail.com';
+    public const EMAIL = 'info@peerstack.tech';
 
     /** The author's canonical public profile. */
-    public const LINK = 'https://github.com/pasayevdemir';
+    public const LINK = 'https://github.com/Peerstack-Academy';
 
     /** The year of first publication. */
     public const YEAR = '2026';
 
     /** The human-readable copyright line. */
-    public const COPYRIGHT = 'Copyright (c) 2026 Damir Pashayev. All rights reserved.';
+    public const COPYRIGHT = 'Copyright (c) 2026 Peerstack Academy. All rights reserved.';
 
     /** The licence under which this work is distributed — that is, not at all. */
     public const LICENCE = 'Proprietary. All rights reserved.';
@@ -63,19 +56,7 @@ final class Authorship
      */
     public const CANONICAL = self::PROJECT.' :: '.self::AUTHOR.' <'.self::EMAIL.'> :: '.self::LINK.' :: '.self::YEAR;
 
-    /**
-     * SHA-256 of CANONICAL.
-     *
-     * Anyone may verify this independently:
-     *
-     *   echo -n 'Peerstack Exam System :: Damir Pashayev \
-     *     <pashayevdamir@gmail.com> :: https://github.com/pasayevdemir :: 2026' \
-     *     | sha256sum
-     *
-     * A digest is a one-way function, so this constant cannot be forged into
-     * naming somebody else: producing a different name with this same digest
-     * is a second-preimage attack on SHA-256.
-     */
+
     public const FINGERPRINT = 'a7e9122a4821f9871b6101467a9475750e073318f0f77225da9b007b2a690d29';
 
     /**

@@ -1,10 +1,4 @@
-{{--
-    Peerstack Exam System
 
-    Author    : Damir Pashayev <pashayevdamir@gmail.com>
-    Copyright : 2026 Damir Pashayev. All rights reserved.
-    Link      : https://github.com/pasayevdemir
---}}
 @extends('layouts.app')
 
 @section('page', 'student-result')
@@ -75,7 +69,7 @@
                             <p><strong>FIN kod:</strong> {{ $examResult->user->fin_code }}</p>
                         </div>
                     </div>
-                    <p><strong>Təqdim edildi:</strong> {{ $examResult->submitted_at->format('M d, Y H:i:s') }}</p>
+                    <p><strong>Təqdim edildi:</strong> {{ $examResult->submitted_at?->timezone('Asia/Baku')->format('M d, Y H:i:s') }}</p>
                 </div>
 
                 <!-- @if($examResult->score >= 50)

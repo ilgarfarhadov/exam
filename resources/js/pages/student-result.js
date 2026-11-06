@@ -1,12 +1,3 @@
-/*!
- * Peerstack Exam System
- *
- * @author    Damir Pashayev <pashayevdamir@gmail.com>
- * @copyright 2026 Damir Pashayev. All rights reserved.
- * @license   Proprietary. All rights reserved.
- * @link      https://github.com/pasayevdemir
- */
-
 /** How long a finished student sees their result before being signed out. */
 const COUNTDOWN_SECONDS = 20;
 
@@ -18,10 +9,10 @@ const COUNTDOWN_SECONDS = 20;
  * intent to keep using the account is a good enough reason to stay.
  */
 export function start(doc = document) {
-    const countdownEl = doc.getElementById('countdown');
-    const logoutForm = doc.getElementById('logout-form');
-    const logoutBtn = doc.getElementById('logout-btn');
-    const continueLink = doc.getElementById('take-another-exam-link');
+    const countdownEl = doc.getElementById("countdown");
+    const logoutForm = doc.getElementById("logout-form");
+    const logoutBtn = doc.getElementById("logout-btn");
+    const continueLink = doc.getElementById("take-another-exam-link");
 
     if (!countdownEl || !logoutForm || !logoutBtn || !continueLink) {
         return;
@@ -37,8 +28,8 @@ export function start(doc = document) {
         finished = true;
         clearInterval(timer);
         logoutBtn.disabled = true;
-        continueLink.classList.add('disabled');
-        continueLink.setAttribute('aria-disabled', 'true');
+        continueLink.classList.add("disabled");
+        continueLink.setAttribute("aria-disabled", "true");
         logoutForm.submit();
     }
 
@@ -56,6 +47,6 @@ export function start(doc = document) {
         }
     }, 1000);
 
-    logoutBtn.addEventListener('click', cancel);
-    continueLink.addEventListener('click', cancel);
+    logoutBtn.addEventListener("click", cancel);
+    continueLink.addEventListener("click", cancel);
 }

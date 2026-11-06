@@ -1,13 +1,4 @@
-/*!
- * Peerstack Exam System
- *
- * @author    Damir Pashayev <pashayevdamir@gmail.com>
- * @copyright 2026 Damir Pashayev. All rights reserved.
- * @license   Proprietary. All rights reserved.
- * @link      https://github.com/pasayevdemir
- */
-
-import { createLivePoll } from '../live-poll.js';
+import { createLivePoll } from "../live-poll.js";
 
 /**
  * The exam list a student lands on: the "are you ready to start" dialog, and a
@@ -18,8 +9,8 @@ import { createLivePoll } from '../live-poll.js';
  * and the dialog releases the held update when it closes.
  */
 export function start(doc = document) {
-    const modalEl = doc.getElementById('startExamModal');
-    const listEl = doc.getElementById('examListLive');
+    const modalEl = doc.getElementById("startExamModal");
+    const listEl = doc.getElementById("examListLive");
 
     // Declared up front so the poll can consult it even if the modal is somehow
     // absent and its wiring is skipped.
@@ -27,11 +18,11 @@ export function start(doc = document) {
     let poll = null;
 
     if (modalEl) {
-        const nameEl = doc.getElementById('startExamModalExamName');
-        const timeLimitEl = doc.getElementById('startExamModalTimeLimit');
-        const confirmBtn = doc.getElementById('startExamModalConfirm');
+        const nameEl = doc.getElementById("startExamModalExamName");
+        const timeLimitEl = doc.getElementById("startExamModalTimeLimit");
+        const confirmBtn = doc.getElementById("startExamModalConfirm");
 
-        modalEl.addEventListener('show.bs.modal', event => {
+        modalEl.addEventListener("show.bs.modal", (event) => {
             modalOpen = true;
 
             const button = event.relatedTarget;
@@ -41,21 +32,22 @@ export function start(doc = document) {
             const timeLimit = button.dataset.timeLimit;
 
             if (timeLimit) {
-                timeLimitEl.textContent = `Vaxt limiti: ${timeLimit} dəqiqədir. `
-                    + 'Vaxt bitdikdə imtahan avtomatik təqdim olunacaq.';
-                timeLimitEl.classList.remove('d-none');
+                timeLimitEl.textContent =
+                    `Vaxt limiti: ${timeLimit} dəqiqədir. ` +
+                    "Vaxt bitdikdə imtahan avtomatik təqdim olunacaq.";
+                timeLimitEl.classList.remove("d-none");
             } else {
-                timeLimitEl.classList.add('d-none');
+                timeLimitEl.classList.add("d-none");
             }
         });
 
-        modalEl.addEventListener('hidden.bs.modal', () => {
+        modalEl.addEventListener("hidden.bs.modal", () => {
             modalOpen = false;
             // Only now is it safe to replace the cards.
             if (poll) poll.applyPending();
         });
 
-        confirmBtn.addEventListener('click', () => {
+        confirmBtn.addEventListener("click", () => {
             // Starting is one-shot: a double click would fire two generate requests.
             confirmBtn.disabled = true;
             window.location.href = confirmBtn.dataset.url;

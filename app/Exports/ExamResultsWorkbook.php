@@ -1,13 +1,6 @@
 <?php
 
-/**
- * Peerstack Exam System
- *
- * @author    Damir Pashayev <pashayevdamir@gmail.com>
- * @copyright 2026 Damir Pashayev. All rights reserved.
- *
- * @link      https://github.com/pasayevdemir
- */
+
 
 namespace App\Exports;
 
@@ -97,7 +90,7 @@ class ExamResultsWorkbook
     {
         $examId = preg_replace('/[^A-Za-z0-9._-]+/', '-', (string) $this->exam->exam_id);
 
-        return 'exam_results_'.trim((string) $examId, '-').'_'.now()->format('Y-m-d_H-i-s').'.xlsx';
+        return 'exam_results_'.trim((string) $examId, '-').'_'.now('Asia/Baku')->format('Y-m-d_H-i-s').'.xlsx';
     }
 
     public function build(): Spreadsheet
@@ -134,7 +127,7 @@ class ExamResultsWorkbook
         $this->text($sheet, 'A4', 'Average Score:');
         $sheet->setCellValue('B4', round((float) $this->results->avg('score'), 2));
         $this->text($sheet, 'A5', 'Generated On:');
-        $this->text($sheet, 'B5', now()->format('Y-m-d H:i:s'));
+        $this->text($sheet, 'B5', now('Asia/Baku')->format('Y-m-d H:i:s'));
 
         $sheet->getStyle('A1:A5')->getFont()->setBold(true);
         $sheet->getStyle('A1:B5')->getBorders()->getAllBorders()->setBorderStyle(Border::BORDER_THIN);
@@ -164,7 +157,7 @@ class ExamResultsWorkbook
             $sheet->setCellValue('E'.$row, $result->correct_answers);
             $sheet->setCellValue('F'.$row, $result->total_questions);
             $this->text($sheet, 'G'.$row, $percentage.'%');
-            $this->text($sheet, 'H'.$row, $result->submitted_at->format('Y-m-d H:i:s'));
+            $this->text($sheet, 'H'.$row, $result->submitted_at?->timezone('Asia/Baku')->format('Y-m-d H:i:s') ?? '');
 
             $this->banded($sheet, 'A'.$row.':H'.$row, $row);
         }

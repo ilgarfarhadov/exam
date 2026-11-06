@@ -1,10 +1,4 @@
-{{--
-    Peerstack Exam System
 
-    Author    : Damir Pashayev <pashayevdamir@gmail.com>
-    Copyright : 2026 Damir Pashayev. All rights reserved.
-    Link      : https://github.com/pasayevdemir
---}}
 @extends('layouts.app')
 
 {{-- Summary of one sitting. By design this page carries no questions, no chosen
@@ -79,7 +73,7 @@
                 <div class="row g-3">
                     <div class="col-sm-6 col-lg-4">
                         <div class="text-muted small">Təqdim edildi</div>
-                        <strong>{{ $examResult->submitted_at?->format('d M Y, H:i') ?? '—' }}</strong>
+                        <strong>{{ $examResult->submitted_at?->timezone('Asia/Baku')->format('d M Y, H:i') ?? '—' }}</strong>
                     </div>
 
                     <div class="col-sm-6 col-lg-4">
